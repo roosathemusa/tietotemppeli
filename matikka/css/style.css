@@ -1,0 +1,20 @@
+h1 {
+    font-family: 'Irish Grover', regular;
+    color: #091915;
+}
+
+.bg-image {
+    background-image: url('../images/tausta.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    width: 100%;
+}
+
+.kissa-image {
+    position: absolute;
+    bottom: 30px;
+    left: 150px;
+    width: 200px;
+    height: auto;
+}
