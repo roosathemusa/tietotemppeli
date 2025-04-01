@@ -1,0 +1,27 @@
+header {
+    background-color: #305F43;
+}
+
+body {
+    font-family: 'Irish Grover', regular !important;
+    color: #091915;
+}
+
+nav a {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url('../images/nappi.png') !important;
+    background-size: 100% 100% !important;   
+}
+
+nav a:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+}
+
+nav a:active {
+    transform: translateY(4px);
+}
+
+#hahmo {
+}
