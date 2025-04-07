@@ -1,32 +1,46 @@
-* {
+
+
+header {
+    background-color: #305F43;
+    
+}
+
+nav a {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url("../img/nappi.png") !important;
+    background-size: 100% 100% !important;   
+}
+
+nav a:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+}
+
+nav a:active {
+    transform: translateY(4px);
+}
+body, header, nav {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html, body {
-    overflow-x: hidden; 
-    margin: 0;          
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;        
 }
 
 
 body {
-    font-family: 'Irish Grover', cursive;
-    background-image: url('/img/taustakuva.png');
+    font-family: 'Irish Grover', regular !important;
+    background-image: url('../img/taustakuva.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
-}
-
-header {
-    width: 100vw;
-    background-color: #305f43;
-    position: relative;
-    top: 0;
-    left: 0;
+    color: #091915;
 }
 
 h1 {
@@ -34,7 +48,7 @@ h1 {
     text-align: center;
    
 }
-img {
+.pollo1 {
     width: 200px;    
     height: 200px; 
     display: block;   
