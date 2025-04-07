@@ -1,24 +1,137 @@
 header {
-    background-color: #305F43;
+    background-color: #184236;
+}
+
+header p {
+    color: #FCF3AE;
 }
 
 body {
     font-family: 'Irish Grover', regular !important;
-    color: #f2c063;
+    color: #091915;
 }
 
-nav a {
+.navbar-toggler {
+    background-color: #FCF3AE !important;
+}
+
+.nav-link {
     font-weight: bold !important;
     color: #091915 !important;
     background-image: url('../images/nappi.png') !important;
-    background-size: 100% 100% !important;   
+    background-size: contain !important;   
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 100px;
+    height: 60px;
+    width: 100%;
+    max-width: 200px; 
+    box-sizing: border-box;
 }
 
-nav a:hover {
+.nav-link:hover {
     background-size: cover; 
     transform: translateY(2px);
 }
 
-nav a:active {
+.nav-link:active {
     transform: translateY(4px);
 }
+
+.nav-link span {
+    z-index: 1;
+    font-size: 1rem;
+}
+
+.bg-image {
+    background-image: url('../images/etusivu_main_img.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.custom-center-box {
+    transform: translateY(20%) translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+}
+
+.custom-nappi {
+    background-image: url('../images/nappi.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #091915;
+    font-weight: bold;
+    padding: 10px 40px;
+    margin: auto;
+    height: 60px;
+    width: 120px;
+    border: none;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.custom-nappi:hover {
+    transform: translateY(2px);
+}
+
+.custom-nappi:active {
+    transform: translateY(4px);
+}
+
+
+
+@media (max-width: 576px) {
+    .custom-center-box {
+        transform: translateY(50%) translateX(-50%);
+    }
+
+    .custom-fxs {
+        font-size: 1.2rem;
+    }
+
+    .custom-txs {
+        font-size: 1rem;
+    }
+
+    .custom-nappi {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        width: 80px;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .custom-txs {
+        font-size: 1.25rem;
+    }
+}
+  
+
+@media (min-width: 768px) {
+    .custom-center-box {
+        transform: translateY(40%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .custom-center-box {
+        transform: translateY(30%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 2rem;
+    }
+}
+
