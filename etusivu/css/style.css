@@ -4,7 +4,7 @@ header {
 
 body {
     font-family: 'Irish Grover', regular !important;
-    color: #091915;
+    color: #f2c063;
 }
 
 nav a {
@@ -22,6 +22,3 @@ nav a:hover {
 nav a:active {
     transform: translateY(4px);
 }
-
-
-
