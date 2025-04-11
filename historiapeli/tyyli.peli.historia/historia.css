@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'Irish Grover', cursive;
+}
+body {
+    background-image: url("../kuvat/tausta.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #184236; 
+    color: rgb(247, 254, 201); 
+    text-align: left; 
+    padding: 20px; 
+}
+.app {
+    background: rgb(247, 254, 201);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+.app h1 {
+    font-weight: 600;
+    color: rgb(168, 155, 16);
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz {
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.btn{
+    background: #222 !important;
+    color: #fff !important;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px 0;
+    margin:10px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:all 0.3s;
+}
+.btn:hover{
+    background:#222;
+    color: #fff;
+}
+#next-btn{
+    background-color: red;
+    color:#fff;
+    font-weight: 500;
+    width: 150px;
+    border:0;
+    padding: 10px;
+    margin:20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+.correct {
+    background-color: greenyellow !important; 
+}
+
+.incorrect {
+    background-color: red !important; 
+}
