@@ -1,0 +1,154 @@
+header {
+    background-color: #184236;
+}
+
+header p {
+    color: #FCF3AE;
+}
+
+body {
+    font-family: 'Irish Grover', regular !important;
+    color: #091915;
+}
+
+.navbar-toggler {
+    background-color: #FCF3AE !important;
+}
+
+.nav-link {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url('../img/nappi.png') !important;
+    background-size: contain !important;   
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 100px;
+    height: 60px;
+    width: 100%;
+    max-width: 200px; 
+    box-sizing: border-box;
+}
+
+.nav-link:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+}
+
+.nav-link:active {
+    transform: translateY(4px);
+}
+
+.nav-link span {
+    z-index: 1;
+    font-size: 1rem;
+}
+body, header, nav {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;        
+}
+
+
+body {
+    font-family: 'Irish Grover', regular !important;
+    background-image: url('../img/taustakuva.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #091915;
+}
+
+h1 {
+    color: #34495e;
+    text-align: center;
+   
+}
+
+
+h2 {
+        color: #34495e;
+        font-family: 'Irish Grover', regular;
+        font-size: clamp(2rem, 6vw, 75px);
+        padding-bottom: 10px;
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+
+
+.section {
+    background-color: rgba(250, 224, 187, 0.9);
+    padding: 20px;
+    margin: 50px auto; 
+    width: 80%; 
+    border-radius: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+p {
+    font: irish;
+    color: #34495e;
+    font-size: 24px;
+    margin-bottom: 20px; 
+    line-height: 1.5; 
+}
+@media (max-width: 576px) {
+    .custom-center-box {
+        transform: translateY(50%) translateX(-50%);
+    }
+
+    .custom-fxs {
+        font-size: 1.2rem;
+    }
+
+    .custom-txs {
+        font-size: 1rem;
+    }
+
+    .custom-nappi {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        width: 80px;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .custom-txs {
+        font-size: 1.25rem;
+    }
+}
+  
+
+@media (min-width: 768px) {
+    .custom-center-box {
+        transform: translateY(40%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .custom-center-box {
+        transform: translateY(30%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 2rem;
+    }
+}
