@@ -1,3 +1,10 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 header {
     background-color: #184236;
 }
@@ -9,6 +16,7 @@ header p {
 body {
     font-family: 'Irish Grover', regular !important;
     color: #091915;
+    overflow-y: hidden;
 }
 
 .navbar-toggler {
@@ -49,14 +57,26 @@ body {
     background-image: url('../images/etusivu_main_img.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100%;    
+    z-index: -1;
+}
+
+.boy-image {
+    bottom: 10px; 
+    top: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
     width: 100%;
+    z-index: 0;
 }
 
 .custom-center-box {
-    transform: translateY(20%) translateX(-50%);
+    transform: translate(-50%, -10%);
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
+    z-index: 1;
+    top: 40%;
 }
 
 .custom-nappi {
@@ -84,52 +104,56 @@ body {
     transform: translateY(4px);
 }
 
-
-
 @media (max-width: 576px) {
     .custom-center-box {
-        transform: translateY(50%) translateX(-50%);
+        transform: translateY(-50%, -50%);
     }
-
     .custom-fxs {
         font-size: 1.2rem;
     }
-
     .custom-txs {
         font-size: 1rem;
     }
-
     .custom-nappi {
         font-size: 0.8rem;
         padding: 10px 20px;
         width: 80px;
     }
+    .boy-image {
+        bottom: 40px; 
+        width: 120px;
+    }
 }
-
 
 @media (min-width: 576px) {
     .custom-txs {
         font-size: 1.25rem;
     }
+    .boy-image {
+        bottom: 30px; 
+        width: 120px;
+    }
 }
   
-
 @media (min-width: 768px) {
     .custom-center-box {
-        transform: translateY(40%) translateX(-50%);
+        transform: translate(-50%, -50%);
     }
-
     .custom-txs {
         font-size: 1.5rem;
     }
-    
+    .boy-image {
+        width: 15vw;
+        max-width: 180px;        
+        min-width: 120px;
+    }    
 }
 
 @media (min-width: 992px) {
     .custom-center-box {
-        transform: translateY(30%) translateX(-50%);
+        transform: translate(-50%, -50%);
+        min-width: 700px;
     }
-
     .custom-txs {
         font-size: 2rem;
     }
