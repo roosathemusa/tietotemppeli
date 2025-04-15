@@ -1,3 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    background-color: #184236;
+}
+
+header p {
+    color: #FCF3AE;
+}
+
+.navbar-toggler {
+    background-color: #FCF3AE !important;
+}
+
+.nav-link {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url('../images/nappi.png') !important;
+    background-size: contain !important;   
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 100px;
+    height: 60px;
+    width: 100%;
+    max-width: 200px; 
+    box-sizing: border-box;
+}
+
+.nav-link:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+}
+
+.nav-link:active {
+    transform: translateY(4px);
+}
+
+.nav-link span {
+    z-index: 1;
+    font-size: 1rem;
+}
+
+body {
+    font-family: 'Irish Grover', regular !important;
+    color: #091915;
+    overflow-y: hidden;
+}
+
 h1 {
     font-family: 'Irish Grover', regular;
     color: #091915;
