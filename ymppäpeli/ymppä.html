@@ -55,24 +55,23 @@
     </div>
 
     <!-- Pelinäkymä -->
-    <div id="game-view" class="d-none d-flex flex-row">
-        <div class="d-flex flex-column">
-            <div class="pb-2">
-                <h1>ISOPANDA</h1>
-            </div>
-            <div class="">
-                <img src="./images/panda.png" alt="animalpicture" id="animal" draggable/>
-            </div> 
+    <div id="game-view" class="container text-center d-none p-4 mb-4">
+        <!-- Eläin nimi ja kuva -->
+        <h2 id="animal-name" class="mb-1">Isopanda</h2>
+        <div>
+            <img id="animal-pic" src="./images/panda.png" alt="eläin" class="img-fluid game-img draggable mb-2" draggable="true"/>   
         </div>
-        <div class="d-flex flex-column">
-            <div class="pb-2">
-                <img src="./images/bambumetsä.png" alt="bambumetsä">
+
+        <!-- Maisemavaihtoehdot -->
+        <div class="row justify-content-center">
+            <div class="col-10 col-sm-4 col-md-4">
+                <img id="pic1" src="./images/bambumetsä.png" alt="bambumetsä" class="img-fluid game-img dropzone">
             </div>
-            <div class="pb-2">
-                <img src="./images/savanni.png" alt="savanni">
+            <div class="col-10 col-sm-4 col-md-4">
+                <img id="pic2" src="./images/savanni.png" alt="savanni" class="img-fluid game-img dropzone">
             </div>
-            <div>
-                <img src="./images/sademetsä.png" alt="sademetsä">
+            <div class="col-10 col-sm-4 col-md-4">
+                <img id="pic3" src="./images/sademetsä.png" alt="sademetsä" class="img-fluid game-img dropzone">
             </div>
         </div>
     </div>
