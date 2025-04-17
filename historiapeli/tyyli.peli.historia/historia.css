@@ -79,3 +79,19 @@ header {
 .incorrect {
     background-color: red !important; 
 }
+.banner-kuva {
+    position: absolute;
+    top: 85px;        
+    transform: translateX(-50%);
+    width: 220px;
+    height: auto;
+    z-index: 2;
+    left: 58%;
+}
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+        .banner-kuva {
+            display: none;  
+        }
+    }
+}

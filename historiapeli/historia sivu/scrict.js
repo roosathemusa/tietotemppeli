@@ -63,12 +63,12 @@ const questions = [
             { text: "Auringon jumala", correct: true },
         ]
     }
-    
 ];
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const kuva = document.getElementById("banner-kuva"); 
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -77,6 +77,7 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Seuraava";
+    kuva.src = "../kuvat/neutral.png"; 
     showQuestion();
 }
 
@@ -103,6 +104,9 @@ function resetState() {
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
+
+    
+    kuva.src = "../kuvat/neutral.png";
 }
 
 function selectAnswer(e) {
@@ -112,8 +116,10 @@ function selectAnswer(e) {
     if (isCorrect) {
         selectedBtn.classList.add("correct");
         score++;
+        kuva.src = "../kuvat/good.png"; 
     } else {
         selectedBtn.classList.add("incorrect");
+        kuva.src = "../kuvat/anger test.png"; 
     }
 
     Array.from(answerButtons.children).forEach(button => {
@@ -141,10 +147,9 @@ function showScore() {
     nextButton.innerHTML = "Aloita alusta";
     nextButton.style.display = "block";
 
-    // Aloita uudelleen
     nextButton.onclick = () => {
         startQuiz();
-        nextButton.onclick = null; 
+        nextButton.onclick = null;
     };
 }
 
