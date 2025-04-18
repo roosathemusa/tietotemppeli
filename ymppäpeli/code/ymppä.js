@@ -105,3 +105,18 @@ function checkAnswer(selected) {
     }
 }
 
+//Seuraavaan kysymykseen siirtyminen
+document.getElementById("next-button").addEventListener("click", function (event) {
+    event.preventDefault(); // Estää sivun hypyn ylälaitaan
+  
+    factBox.classList.add("d-none");
+  
+    currentIndex++;
+    if (currentIndex < animals.length) {
+      showAnimal(); 
+    } else {
+      endGame(); 
+    }
+  });
+  
+
