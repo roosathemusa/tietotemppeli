@@ -25,7 +25,7 @@ const animals = [
     {
         name: "Tiikeri",
         image: "./images/tiikeri.jpg",
-        correctEnvironment: "sademetsä",
+        correctEnvironment: "rainforest",
         fact: "tiikerin turkin kuviointi näkyy vielä silloinkin, kun se on ajeltu. Tämä ei johdu ihon pigmentistä, vaan ihoon juurtuneista karvoista ja karvatupista. (Lähde: Animalia.bio)"
     },
     {
