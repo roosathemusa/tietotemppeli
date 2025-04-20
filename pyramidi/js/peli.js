@@ -108,10 +108,16 @@ function shuffleWords() {
       const targetRowId = kategoriaRivit[firstCategory];
       const targetRow = document.getElementById(targetRowId);
   
-      // Siirrä yhdistetyt sanat oikealle riville ja merkitse finaliksi
-      selectedWords.forEach(w => {
-        w.classList.add('final');
-        targetRow.appendChild(w);
+      // Siirrä kaikki yhdistetyt sanat oikealle riville ja merkitse finaliksi
+      const allWords = Array.from(document.querySelectorAll('.word'));
+      allWords.forEach(w => {
+        if (
+          w.getAttribute('data-category') === firstCategory &&
+          yhdistetytSanat[firstCategory].has(w.innerText)
+        ) {
+          w.classList.add('final');
+          targetRow.appendChild(w);
+        }
       });
   
       // 🔄 Päivitä jäljelle jäävät sanat pyramidimuotoon
