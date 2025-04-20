@@ -1,11 +1,15 @@
 body {
-    font-family: 'Irish Grover', regular !important;
     background-image: url('../img/background4.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
-    color: #091915;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    padding: 30px;
+    text-align: center;
+    color: #3a2e1d;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 h1 {
@@ -25,139 +29,122 @@ h2 {
     }
 
 
-.section {
-    background-color: rgba(250, 224, 187, 0.9);
-    padding: 20px;
-    margin: 50px auto; 
-    width: 80%; 
-    border-radius: 10px;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-}
-
-p {
-    font: irish;
-    color: #34495e;
-    font-size: 24px;
-    margin-bottom: 20px; 
-    line-height: 1.5; 
-}
-body {
-    font-family: 'Papyrus', 'Segoe UI', sans-serif;
-    padding: 30px;
-    text-align: center;
-    color: #5b3c11;
-  }
-  
-
-    #pyramid {
+    body {
+        
+      }
+      
+      #pyramid {
         max-width: 100%;
         margin: 30px auto;
       }
+      
       .row {
         display: flex;
         justify-content: center;
         gap: 8px;
-        flex-wrap: nowrap;
-        margin: 10px auto;        /* antaa ilmaa rivien väliin ja keskittää */
+        flex-wrap: wrap;
+        margin: 10px auto;
       }
       
-      #row-1 { width: 20%; }
-      #row-2 { width: 40%; }
-      #row-3 { width: 60%; }
-      #row-4 { width: 80%; }
-      #row-5 { width: 100%; }
-
-  
-  /* ✅ Korjattu: Ei venytystä, säilyttää pyramidimuodon */
-  .word {
-    padding: 14px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.2s ease;
-    text-align: center;
-    color: #3a2e1d;
-    background: linear-gradient(to top left, #f2d7a0, #e0b96c);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-    min-width: 90px;
-    max-width: 120px;
-    flex: 0 0 auto;
-  }
-  
-  .word:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-  }
-  
-  .word.selected {
-    outline: 3px dashed #008080;
-    background: linear-gradient(to top left, #e0f7d1, #a8ddb5);
-  }
-  
-  .word.wrong {
-    background: #c1440e;
-    color: white;
-  }
-  
-  .word.correct {
-    background: #c3aa63;
-    color: #1c1405;
-  }
-  
-  .word.final {
-    opacity: 0.7;
-    pointer-events: none;
-  }
-  
-  .word.merged {
-    background: linear-gradient(to bottom, #d4af37, #a67c00);
-    font-weight: bold;
-    color: white;
-    font-size: 1.1rem;
-    border: 2px solid #fff3c2;
-    box-shadow: inset 0 0 6px #fff7c1;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .merged-words {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 4px;
-    align-items: center;
-  }
-  
-  .merged-words span {
-    white-space: nowrap;
-  }
-  
-  #check-button {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    padding: 12px 22px;
-    background-color: #8b5e3c;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.25);
-  }
-  
-  #check-button:hover {
-    background-color: #a66e40;
-    transform: scale(1.05);
-  }
-  
-  #message {
-    margin-top: 18px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #5b3c11;
-  }
+      .word.final {
+        flex-grow: 1;
+      }
+      
+      #row-1 { flex: 1 1 20%; }
+      #row-2 { flex: 1 1 40%; }
+      #row-3 { flex: 1 1 60%; }
+      #row-4 { flex: 1 1 80%; }
+      #row-5 { flex: 1 1 100%; }
+      
+      .word {
+        padding: 14px 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.2s ease;
+        text-align: center;
+        color: #3a2e1d;
+        background: linear-gradient(to top left, #f2d7a0, #e0b96c);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        min-width: 60px;
+        max-width: 140px;
+        flex: 1 1 auto;
+        display: inline-block;
+        white-space: nowrap;
+        text-transform: uppercase;
+      }
+      
+      .word:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+      }
+      
+      .word.selected {
+        outline: 3px dashed #008080;
+        background: linear-gradient(to top left, #e0f7d1, #a8ddb5);
+      }
+      
+      .word.wrong {
+        background: #c1440e;
+        color: white;
+      }
+      
+      .word.correct {
+        background: #c3aa63;
+        color: #1c1405;
+      }
+      
+      .word.final {
+        opacity: 0.7;
+        pointer-events: none;
+      }
+      
+      .word.merged {
+        background: linear-gradient(to bottom, #d4af37, #a67c00);
+        font-weight: bold;
+        color: white;
+        font-size: 1.1rem;
+        border: 2px solid #fff3c2;
+        box-shadow: inset 0 0 6px #fff7c1;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      
+      .merged-words {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 4px;
+        align-items: center;
+      }
+      
+      .merged-words span {
+        white-space: nowrap;
+      }
+      
+      #check-button {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        padding: 12px 22px;
+        background-color: #8b5e3c;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.2s;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+      }
+      
+      #check-button:hover {
+        background-color: #a66e40;
+        transform: scale(1.05);
+      }
+      
+      #message {
+        margin-top: 18px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #5b3c11;
+      }
+      
