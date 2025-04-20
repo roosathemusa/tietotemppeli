@@ -1,144 +1,114 @@
-const initialWords = [
-    "omena", "banaani", "appelsiini", "päärynä", "mango",
-    "koira", "kissa", "kani", "hamsteri",
-    "auto", "bussi", "juna",
-    "sininen", "punainen",
-    "tietokone"
-];
-
-const correctAnswersByRow = [
-    ["omena", "banaani", "appelsiini", "päärynä", "mango"],
-    ["koira", "kissa", "kani", "hamsteri"],
-    ["auto", "bussi", "juna"],
-    ["sininen", "punainen"],
-    ["tietokone"]
-];
-
-const otsikot = [
-    "Hedelmät:",
-    "Eläimet:",
-    "Kulkuvälineet:",
-    "Värit:",
-    "Laite:"
-];
-
-const pyramid = [5, 4, 3, 2, 1];
-const grid = document.getElementById("words-grid");
-let selectedWords = [];
-let checkedRows = new Set();
-
-let words = [...initialWords];
-let availableWords = [...words].sort(() => Math.random() - 0.5);
-let wordButtons = []; // tallentaa kaikki alkuperäiset sananapit oikeassa järjestyksessä
-
-// Luo rivit niin, että jokainen sana tulee vain kerran
-function createGrid() {
-    grid.innerHTML = ""; // Tyhjennä aiempi sisältö
-    wordButtons = []; // Tyhjennä aiempi sananappilista
-
-    pyramid.forEach((rowSize, i) => {
-        const row = document.createElement("div");
-        row.className = `row row-${i + 1}`;
-
-        for (let j = 0; j < rowSize; j++) {
-            if (availableWords.length > 0) {
-                const word = availableWords.shift();
-                const btn = document.createElement("button");
-                btn.textContent = word;
-                btn.className = "word-button";
-                btn.addEventListener("click", () => selectWord(btn));
-                wordButtons.push(btn); // tallenna alkuperäiseen listaan
-                row.appendChild(btn);
-            }
-        }
-
-        grid.appendChild(row);
+// 🔄 Sekoitustoiminto
+function shuffleWords() {
+    const pyramid = document.getElementById('pyramid');
+    const allWords = Array.from(document.querySelectorAll('.word'));
+  
+    // Sekoita sanat (Fisher-Yates)
+    for (let i = allWords.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [allWords[i], allWords[j]] = [allWords[j], allWords[i]];
+    }
+  
+    // Tyhjennä rivit pyramidissa
+    const rows = pyramid.querySelectorAll('.row');
+    rows.forEach(row => row.innerHTML = '');
+  
+    // Lisää sekoitetut sanat riveihin säilyttäen pyramidimuoto (1 sana ylhäällä → 5 sanaa alhaalla)
+    let index = 0;
+    for (let i = 0; i < rows.length; i++) {
+      const wordsInRow = i + 1;
+      for (let j = 0; j < wordsInRow && index < allWords.length; j++) {
+        rows[i].appendChild(allWords[index]);
+        index++;
+      }
+    }
+  }
+  
+  // 🚀 Kutsutaan kun sivu latautuu
+  window.addEventListener('DOMContentLoaded', () => {
+    shuffleWords();
+  
+    // Lisää klikkitapahtumat sanoille uudestaan, koska ne on siirretty DOMissa
+    const words = document.querySelectorAll('.word');
+    words.forEach(word => {
+      word.addEventListener('click', handleClick);
     });
-}
-
-createGrid();
-
-function selectWord(button) {
-    button.classList.toggle("selected");
-    if (button.classList.contains("selected")) {
-        selectedWords.push(button.textContent);
+  });
+  
+  let selectedWords = [];
+  const yhdistetytSanat = {
+    animals: new Set(),
+    fruits: new Set(),
+    vehicles: new Set(),
+    colors: new Set(),
+    technology: new Set()
+  };
+  
+  const oikeatMäärät = {
+    animals: 5,
+    fruits: 4,
+    vehicles: 3,
+    colors: 2,
+    technology: 1
+  };
+  
+  const checkButton = document.getElementById('check-button');
+  const message = document.getElementById('message');
+  
+  function handleClick(e) {
+    const word = e.target;
+    word.classList.toggle('selected');
+  
+    if (word.classList.contains('selected')) {
+      selectedWords.push(word);
     } else {
-        selectedWords = selectedWords.filter(word => word !== button.textContent);
+      selectedWords = selectedWords.filter(w => w !== word);
     }
-}
-
-const mergedRowImages = [
-    "osa1.png",
-    "osa2.png",
-    "osa3.png",
-    "osa4.png",
-    "osa5.png"
-];
-
-function mergeRowWords(rowIndex, mergedText, otsikko) {
-    const row = document.querySelector(`.row-${rowIndex}`);
-    const cols = pyramid[rowIndex - 1];  // monta saraketta tällä rivillä
+  }
   
-    // Tyhjennä vain sisältö, älä grid asetusta
-    row.innerHTML = "";
+  function checkSelectedWords() {
+    const categories = selectedWords.map(w => w.getAttribute('data-category'));
+    const firstCategory = categories[0];
+    const allSame = categories.every(c => c === firstCategory);
   
-    // Luo nappi, joka spanää koko rivin levyisen alueen
-    const mergedBtn = document.createElement("button");
-    mergedBtn.className = "merged-button";
-    mergedBtn.disabled = true;
-    mergedBtn.style.gridColumn = `1 / span ${cols}`;
-    mergedBtn.innerHTML = `<strong>${otsikko}</strong><br>${mergedText}`;
+    if (!allSame) {
+      message.textContent = 'Sanat eivät ole samasta kategoriasta!';
+      selectedWords.forEach(w => w.classList.add('wrong'));
+      setTimeout(() => {
+        selectedWords.forEach(w => {
+          w.classList.remove('wrong', 'selected');
+        });
+        selectedWords = [];
+      }, 1000);
+      return;
+    }
   
-    row.appendChild(mergedBtn);
-}
-
-function checkRow() {
-    let found = false;
-
-    for (let i = 0; i < correctAnswersByRow.length; i++) {
-        if (checkedRows.has(i)) continue;
-
-        const correctWords = correctAnswersByRow[i];
-        if (
-            selectedWords.length === correctWords.length &&
-            selectedWords.every(word => correctWords.includes(word))
-        ) {
-            mergeRowWords(i + 1, selectedWords.join(", "), otsikot[i]);
-            checkedRows.add(i);
-            document.getElementById("result").textContent = `Rivi ${i + 1} on oikein!`;
-
-            // Poista käytetyt sanat vakiolistasta
-            selectedWords.forEach(word => {
-                const index = words.indexOf(word);
-                if (index > -1) {
-                    words.splice(index, 1);
-                }
-            });
-
-            // Päivitä availableWords-lista
-            availableWords = [...words].sort(() => Math.random() - 0.5);
-
-            // Päivitä sananapit
-            wordButtons.forEach(btn => {
-                if (selectedWords.includes(btn.textContent)) {
-                    btn.remove(); // Poista käytetyt sananapit
-                }
-            });
-
-            selectedWords = [];
-            document.querySelectorAll('.word-button').forEach(btn => btn.classList.remove("selected"));
-            found = true;
-            break;
-        }
+    // Lisää sanat yhdistettyihin
+    selectedWords.forEach(w => {
+      yhdistetytSanat[firstCategory].add(w.innerText);
+      w.classList.add('combined', 'correct');
+      w.removeEventListener('click', handleClick);
+    });
+  
+    // Tarkista onko koko kategoria valmis
+    if (yhdistetytSanat[firstCategory].size === oikeatMäärät[firstCategory]) {
+      message.textContent = `🎉 Kategoria "${firstCategory}" ratkaistu oikein!`;
+    } else {
+      message.textContent = `✅ Oikea kategoria! Jatka yhdistämistä.`;
     }
-
-    if (!found) {
-        document.getElementById("result").textContent = `Valinta ei vastaa mitään riviä.`;
+  
+    // Tarkista voitto
+    const kaikkiValmiit = Object.keys(oikeatMäärät).every(kategoria =>
+      yhdistetytSanat[kategoria].size === oikeatMäärät[kategoria]
+    );
+  
+    if (kaikkiValmiit) {
+      message.textContent = '🏆 Voitit pelin! Kaikki kategoriat yhdistetty!';
+      checkButton.disabled = true;
     }
-
-    if (checkedRows.size === correctAnswersByRow.length) {
-        document.getElementById("result").textContent += " Kaikki rivit on tarkistettu!";
-    }
-}
-
-document.getElementById("checkButton").addEventListener("click", checkRow);
+  
+    selectedWords = [];
+  }
+  
+  checkButton.addEventListener('click', checkSelectedWords);
+  
