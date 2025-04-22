@@ -124,6 +124,16 @@ body {
         bottom: 40px; 
         width: 120px;
     }
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
 }
 
 @media (min-width: 576px) {
@@ -157,6 +167,17 @@ body {
     }
     .custom-txs {
         font-size: 2rem;
+    }
+}
+@media (max-height: 500px) {
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 }
 
