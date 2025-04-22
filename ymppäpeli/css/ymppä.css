@@ -1,5 +1,5 @@
 header {
-    background-color: #305F43;
+    background-color: #184236;
     overflow: visible;
 }
 header p {
@@ -103,7 +103,7 @@ body {
         left: 0;
         width: 100%;
         z-index: 1200; 
-        background-color: #305F43; 
+        background-color: #184236; 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     
@@ -182,7 +182,7 @@ body {
         left: 0;
         width: 100%;
         z-index: 1200;
-        background-color: #305F43;
+        background-color: #184236;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 }
