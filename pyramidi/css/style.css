@@ -1,125 +1,226 @@
+
+header {
+  background-color: #184236;
+}
+
+header p {
+  color: #FCF3AE;
+}
+
 body {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-    background-image: url('../img/background4.png');
-    padding: 30px;
-    text-align: center;
-    color: #3a2e1d;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
-  #pyramid {
-    max-width: 100%;
-    margin: 30px auto;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin: 10px auto;
-  }
-  
-  .word.final {
-    flex-grow: 1;
-  }
-  
-  #row-1 { flex: 1 1 20%; }
-  #row-2 { flex: 1 1 40%; }
-  #row-3 { flex: 1 1 60%; }
-  #row-4 { flex: 1 1 80%; }
-  #row-5 { flex: 1 1 100%; }
-  
-  .word {
-    padding: 14px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 10px;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.2s ease;
-    text-align: center;
-    color: #3a2e1d;
-    background: linear-gradient(to top left, #f2d7a0, #e0b96c);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-    min-width: 60px;
-    max-width: 140px;
-    flex: 1 1 auto;
-    display: inline-block;
-    white-space: nowrap;
-    text-transform: uppercase;
-  }
-  
-  .word:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-  }
-  
-  .word.selected {
-    outline: 3px dashed #008080;
-    background: linear-gradient(to top left, #e0f7d1, #a8ddb5);
-  }
-  
-  .word.wrong {
-    background: #c1440e;
-    color: white;
-  }
-  
-  .word.correct {
-    background: #c3aa63;
-    color: #1c1405;
-  }
-  
-  .word.final {
-    opacity: 0.7;
-    pointer-events: none;
-  }
-  
-  .word.merged {
-    background: linear-gradient(to bottom, #d4af37, #a67c00);
-    font-weight: bold;
-    color: white;
-    font-size: 1.1rem;
-    border: 2px solid #fff3c2;
-    box-shadow: inset 0 0 6px #fff7c1;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .merged-words {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 4px;
-    align-items: center;
-  }
-  
-  .merged-words span {
-    white-space: nowrap;
-  }
-  
-  #check-button {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    padding: 12px 22px;
-    background-color: #8b5e3c;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.25);
-  }
-  
-  #check-button:hover {
-    background-color: #a66e40;
-    transform: scale(1.05);
-  }
-  
-  #message {
-    margin-top: 18px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #5b3c11;
-  }
-  
+  font-family: 'Irish Grover', regular !important;
+  color: #091915;
+  overflow-y: hidden;
+}
+
+.navbar-toggler {
+  background-color: #FCF3AE !important;
+}
+
+.nav-link {
+  font-weight: bold !important;
+  color: #091915 !important;
+  background-image: url('../img/nappi.png') !important;
+  background-size: contain !important;   
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-right: 100px;
+  height: 60px;
+  width: 100%;;
+  max-width: 200px; 
+  box-sizing: border-box;
+}
+
+.nav-link:hover {
+  background-size: cover; 
+  transform: translateY(2px);
+}
+
+.nav-link:active {
+  transform: translateY(4px);
+}
+
+.nav-link span {
+  z-index: 1;
+  font-size: 1rem;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+
+#game-title {
+  font-family: 'Irish Grover', cursive;
+  font-size: 2.5rem;
+  color: #3a2e1d;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#game-instructions {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  color: #5b3c11;
+  line-height: 1.6;
+  font-family: 'Irish Grover', cursive;
+} 
+}
+#game {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background-image: url('../img/background4.png');
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  text-align: center;
+  color: #3a2e1d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#game #pyramid {
+  margin-top: 5vh;
+  max-width: 100%;
+  margin: 30px auto;
+}
+
+#game .row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+#game .word.final {
+  flex-grow: 1;
+}
+
+#game #row-1 { flex: 1 1 20%; }
+#game #row-2 { flex: 1 1 40%; }
+#game #row-3 { flex: 1 1 60%; }
+#game #row-4 { flex: 1 1 80%; }
+#game #row-5 { flex: 1 1 100%; }
+
+#game .word {
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  text-align: center;
+  color: #3a2e1d;
+  background: linear-gradient(to top left, #f2d7a0, #e0b96c);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  min-width: 60px;
+  max-width: 140px;
+  flex: 1 1 auto;
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+#game .word:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+#game .word.selected {
+  outline: 3px dashed #008080;
+  background: linear-gradient(to top left, #e0f7d1, #a8ddb5);
+}
+
+#game .word.wrong {
+  background: #c1440e;
+  color: white;
+}
+
+#game .word.correct {
+  background: #c3aa63;
+  color: #1c1405;
+}
+
+#game .word.final {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+#game .word.merged {
+  background: linear-gradient(to bottom, #d4af37, #a67c00);
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+  border: 2px solid #fff3c2;
+  box-shadow: inset 0 0 6px #fff7c1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#game .merged-words {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  align-items: center;
+}
+
+#game .merged-words span {
+  white-space: nowrap;
+}
+
+#game #check-button {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  padding: 12px 22px;
+  background-color: #8b5e3c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+}
+
+#game #check-button:hover {
+  background-color: #a66e40;
+  transform: scale(1.05);
+}
+
+#game #message {
+  margin-top: 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5b3c11;
+}
+
+  @media (max-width: 576px) {
+
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+}
+
+@media (max-height: 500px) {
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+}
