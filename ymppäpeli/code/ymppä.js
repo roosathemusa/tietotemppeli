@@ -14,61 +14,61 @@ const animals = [
         name: "Isopanda",
         image: "./images/panda.png",
         correctEnvironment: "bambuforest",
-        fact: "mustan turkkinsa alla pandan iho on musta ja vaaleanpunainen valkoisen turkin kohdalla. (Lähde: Animalia.bio)"
+        fact: "mustan turkkinsa alla pandan iho on musta ja vaaleanpunainen valkoisen turkin kohdalla."
     },
     {
         name: "Leijona",
         image: "./images/leijona.jpg",
         correctEnvironment: "savanna",
-        fact: "laumassa leijonanaarat ovat vastuussa metsästyksestä, kun taas urokset puolustavat reviiriä. Huolimatta tästä vastuun jakamisesta urokset syövät aina ensin. (Lähde: Animalia.bio)"
+        fact: "laumassa leijonanaarat ovat vastuussa metsästyksestä, kun taas urokset puolustavat reviiriä. Huolimatta tästä vastuun jakamisesta urokset syövät aina ensin."
     },
     {
         name: "Tiikeri",
         image: "./images/tiikeri.jpg",
         correctEnvironment: "rainforest",
-        fact: "tiikerin turkin kuviointi näkyy vielä silloinkin, kun se on ajeltu. Tämä ei johdu ihon pigmentistä, vaan ihoon juurtuneista karvoista ja karvatupista. (Lähde: Animalia.bio)"
+        fact: "tiikerin turkin kuviointi näkyy vielä silloinkin, kun se on ajeltu. Tämä ei johdu ihon pigmentistä, vaan ihoon juurtuneista karvoista ja karvatupista."
     },
     {
         name: "Saharansarvikyy",
         image: "./images/sarvikyy.jpg",
         correctEnvironment: "desert",
-        fact: "saharansarvikyy varoittaa uhkaajaa sahamaisella äänellä, jonka se saa aikaan hankaamalla karheita kyljen harjasuomuja toisiinsa. (Lähde: Animalia.bio)"
+        fact: "saharansarvikyy varoittaa uhkaajaa sahamaisella äänellä, jonka se saa aikaan hankaamalla karheita kyljen harjasuomuja toisiinsa."
     },
     {
         name: "Lamantiini",
         image: "./images/lamantiini.jpg",
         correctEnvironment: "marine",
-        fact: "lamantiini eli kynsimanaatti eli manaatti (Trichechus manatus) on yksi kolmesta manaattien nisäkäsheimon lajista. (Lähde: Animalia.bio)"
+        fact: "lamantiini eli kynsimanaatti eli manaatti (Trichechus manatus) on yksi kolmesta manaattien nisäkäsheimon lajista."
     },
     {
         name: "Keisaripingviini",
         image: "./images/pingviini.jpg",
         correctEnvironment: "antarctic",
-        fact: "lisääntyessään keisaripingviininaaras munii yhden munan, jonka se vierittää koiraalle haudottavaksi. Sitten naaras lähtee merelle kalaisille vesille syömään ja viettää siellä talven. Koiras hautoo munaa jalkojensa päällä ihopoimun suojassa yhdeksän viikkoa. (Lähde: Animalia.bio)"
+        fact: "lisääntyessään keisaripingviininaaras munii yhden munan, jonka se vierittää koiraalle haudottavaksi. Sitten naaras lähtee merelle kalaisille vesille syömään ja viettää siellä talven. Koiras hautoo munaa jalkojensa päällä ihopoimun suojassa yhdeksän viikkoa."
     },
     {
         name: "Tulisalamanteri",
         image: "./images/salamanteri.jpg",
         correctEnvironment: "mediterrane",
-        fact: "tulisalamanterin elinympäristöä ovat vesistöjen läheiset kosteat ja varjoisat lehtimetsäalueet. (Lähde: Animalia.bio)"
+        fact: "tulisalamanterin elinympäristöä ovat vesistöjen läheiset kosteat ja varjoisat lehtimetsäalueet."
     },
     {
         name: "Muuttohaukka",
         image: "./images/jalohaukka.jpg",
         correctEnvironment: "tundra",
-        fact: "muuttohaukka eli jalohaukka on maailman nopein eläin ja voi pystysuorassa syöksyssä kiitää jopa lähes 400 km/h. (Lähde: Animalia.bio)"
+        fact: "muuttohaukka eli jalohaukka on maailman nopein eläin ja voi pystysuorassa syöksyssä kiitää jopa lähes 400 km/h."
     },
     {
         name: "Liito-orava",
         image: "./images/liito-orava",
         correctEnvironment: "taiga",
-        fact: "paritteluaikaan liito-orava uroksia voi olla yhden naaraan seurassa useampia, jolloin ne kilpailevat naaraasta ajamalla toisiaan takaa. (Lähde: Animalia.bio)"
+        fact: "paritteluaikaan liito-orava uroksia voi olla yhden naaraan seurassa useampia, jolloin ne kilpailevat naaraasta ajamalla toisiaan takaa."
     },
     {
         name: "Aroseepra",
         image: "./images/seepra.jpg",
         correctEnvironment: "grassland",
-        fact: "seeprat ovat aikaisessa sikiövaiheessa väriltään mustia ja valkoiset raidat kehittyvät vasta myöhemmin. (Lähde: Wikipedia)"
+        fact: "seeprat ovat aikaisessa sikiövaiheessa väriltään mustia ja valkoiset raidat kehittyvät vasta myöhemmin."
     }
 ]
 
