@@ -46,8 +46,8 @@
         <h1 class="custom-fxs m-auto pb-2">ELÄINPELI</h1>
         <div class="text-center">
             <p class="custom-txs">
-                Vie eläimet niiden oikeaan elinympäristöön vetämällä.<br>
-                Yksi oikea vastaus on yksi piste.<br>
+                Valitse mikä biomi on eläimen yleisin elinympäristö.<br>
+                Oikean vastauksen jälkeen<br>
                 Onnea matkaan seikkailija!
             </p>
             <a id="start-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi">ALOITA</a>
@@ -75,12 +75,17 @@
             </div>
         </div>
 
+        <!-- Tulos-näkymä -->
+        <div id="result-box" class="d-none custom-center-box position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-50">
+            <h1 id="result-txt" class="custom-fxs m-auto pb-2"></h1>
+        </div>
+
         <!-- Fact-näkymä -->
         <div id="fact-box" class="custom-center-box d-none position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-50">
-            <h1 class="custom-fxs m-auto pb-2">Tiestikö, että</h1>
+            <h1 class="custom-fxs m-auto pb-2">Tiestikö muuten, että</h1>
             <div class="text-center">
                 <p class="custom-txs" id="fact-txt"></p>
-                <a id="next-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi">SEURAAVA</a>
+                <a id="next-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi" disabled>SEURAAVA</a>
             </div>
         </div>
 
