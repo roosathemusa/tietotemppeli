@@ -88,6 +88,7 @@ header {
     z-index: 2;
     left: 58%;
 }
+
 @media (max-width: 768px) {
     .banner-kuva {
         display: none;
@@ -116,7 +117,7 @@ header {
         left: 0;
         width: 100%;
         z-index: 1200; 
-        background-color: #305F43; 
+        background-color: #5feb97; 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     
@@ -232,7 +233,9 @@ header {
     z-index: 1;
     font-size: 1rem;
 }
-
+.navbar-toggler{
+    background-color: aqua;
+}
 .bg-image {
     background-image: url('../kuvat/nappi1.png');
     background-size: cover;
