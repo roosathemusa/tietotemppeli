@@ -66,6 +66,60 @@ h1 {
     width: 100%;
 }
 
+.question-box {
+    background-color: #fef8cb;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    padding: 30px;
+    position: relative;  
+    z-index: 1;
+}
+
+.answer-input {
+    width: 125px !important; 
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.button-answer {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url('../images/nappi.png') !important;
+    background-size: contain !important;   
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 60px;
+    max-width: 200px; 
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    user-select: none;
+    display: inline-block;
+}
+
+.button-answer:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+    background-color: #F9D03E;
+}
+
+.button-answer:active {
+    transform: translateY(4px);
+    background-color: #184236;
+}
+
 .kissa-image {
     position: absolute;
     bottom: 30px;
@@ -73,3 +127,4 @@ h1 {
     width: 200px;
     height: auto;
 }
+
