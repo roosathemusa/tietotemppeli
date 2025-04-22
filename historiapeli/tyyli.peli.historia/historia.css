@@ -89,12 +89,120 @@ header {
     left: 58%;
 }
 @media (max-width: 768px) {
-    @media (max-width: 768px) {
-        .banner-kuva {
-            display: none;  
-        }
+    .banner-kuva {
+        display: none;
+    }
+    .custom-nappi {
+        font-size: 0.8rem !important;
+        padding: 10px 20px !important;
+        width: 80px !important;
+        display: inline-block !important; /* Varmistaa, että nappi on näkyvissä */
     }
 }
+@media (max-width: 576px){
+    header {
+        padding: 1rem;
+    }
+    p.h1 {
+        font-size: 1.8rem;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    #navbarNav {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        z-index: 1200; 
+        background-color: #305F43; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    #background {
+        height: 50vh;
+    }
+    #caracther {
+        bottom: 1em;
+        left: 1em;
+        width: 120px;
+        max-width: none;
+    }
+
+    .custom-center-box {
+        transform: translateY(50%) translateX(-50%);
+    }
+    .custom-fxs {
+        font-size: 1.2rem;
+    }
+    .custom-txs {
+        font-size: 1rem;
+    }
+    .custom-nappi {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        width: 80px;
+    }
+}
+
+@media (min-width: 576px) {
+    .custom-txs {
+        font-size: 1.25rem;
+    }
+}
+  
+
+@media (min-width: 768px) {
+    .custom-center-box {
+        transform: translateY(40%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .custom-center-box {
+        transform: translateY(30%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 2rem;
+    }
+}
+
+@media (max-height: 500px) {
+    .custom-center-box {
+        padding: 10px !important;
+    }
+    .custom-fxs {
+        font-size: 0.9rem;
+    }
+    .custom-txs {
+        font-size: 0.8rem;
+    }
+    .custom-nappi {
+        height: 40px;
+        width: 100px;
+        font-size: 0.8rem;
+    }
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #305F43;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+}
+
+        
+
 .nav-link {
     font-weight: bold !important;
     color: #091915 !important;
