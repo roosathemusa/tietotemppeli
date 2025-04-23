@@ -12,30 +12,91 @@ const questions = [
         type: "input",
         question: `Pölyn peittämä kirjoitus kiviseinällä paljastaa muinaisen arvoituksen...
 
-                Avain porttiin on luku, joka kantaa seuraavat merkit:
-                - Nelinumeroinen muoto.
-                - Tuhansien merkki suurempi kuin 6.
-                - Satojen merkki on pariton.
-                - Kymmenien merkki jaollinen kolmella.
-                - Ja siinä toistuu ainakin yksi numero...
+            Avain porttiin on luku, joka kantaa seuraavat merkit:
+            - Nelinumeroinen muoto.
+            - Tuhansien merkki suurempi kuin 6.
+            - Satojen merkki on pariton.
+            - Kymmenien merkki jaollinen kolmella.
+            - Ja siinä toistuu ainakin yksi numero...
 
-                Vain yksi luvuista avaa muinaisen oven:
-                5263, 8037, 19827, 2839, 726, 9391, 4755, 8628, 9390`,
+            Vain yksi luvuista avaa muinaisen oven:
+            5263, 8037, 19827, 2839, 726, 9391, 4755, 8628, 9390`,
         correctAnswer: "9390"
     },
     {
         type: "multiple-choice",
         question: `Syvällä pyramidin sisällä, temppelissä täynnä loitsuja ja hiekan peittämiä hieroglyfejä, 
-                    muinainen lisko-kapteeni on jättänyt jälkeensä arvoituksen...
-                    "Kolme sammakkoa — Dorris, Borris ja Morris — auttavat minua vartioimaan aarteita. Varmistin vaa'an avulla, että jokainen heistä on oikeassa painossa. Mutta muista: muinaisessa vaa'assa voi punnita vain kaksi sammakkoa kerrallaan..."
-                    
-                    Vaa'an mittaukset:
-                    Dorris ja Borris painavat yhteensä 12 g.
-                    Borris ja Morris painavat yhteensä 16 g.
-                    Dorris ja Morris painavat yhteensä 14 g.`,
-        options: ["a) Dorris: 5 g, Borris: 7 g, Morris: 9 g", "b) Dorris: 6 g, Borris: 8 g, Morris: 10 g", "c) Dorris: 4 g, Borris: 6 g, Morris: 8 g"],
-        correctAnswer: "a) Dorris: 5 g, Borris: 7 g, Morris: 9 g"
+            muinainen lisko-kapteeni on jättänyt jälkeensä arvoituksen...
+            "Kolme sammakkoa — Dorris, Borris ja Morris — auttavat minua vartioimaan aarteita. Varmistin vaa'an avulla, että jokainen heistä on oikeassa painossa. Mutta muista: muinaisessa vaa'assa voi punnita vain kaksi sammakkoa kerrallaan..."
+            
+            Vaa'an mittaukset:
+            - Dorris ja Borris painavat yhteensä 12 g.
+            - Borris ja Morris painavat yhteensä 16 g.
+            - Dorris ja Morris painavat yhteensä 14 g.`,
+        options: ["Dorris: 5 g, Borris: 7 g, Morris: 9 g", "Dorris: 6 g, Borris: 8 g, Morris: 10 g", "Dorris: 4 g, Borris: 6 g, Morris: 8 g"],
+        correctAnswer: "Dorris: 5 g, Borris: 7 g, Morris: 9 g"
     },
+    {
+        type: "multiple-choice",
+        question: `Keidassaaren hiekkojen keskellä, missä palmut humisevat ja tuuli kuiskii, viisas lisko Taiger kokoaa koristeita pyhään Anubiksen akvaarioonsa. Muinaisten aikojen basaarista hän löysi viisi taianomaista esinettä:
+                - Kultainen kissapatsas - 16 kultakolikkoa
+                - Pikkuruinen sfinksi - 35 kultakolikkoa
+                - Suuren krokotiilin kallo - 22 kultakolikkoa
+                - Niilin pyhistä vesistä peräisin oleva kasvi - 17 kultakolikkoa
+                - Hiekkamatto täynnä hieroglyfejä - 12 kultakolikkoa.
+                Taiger valitsi tarkalleen neljä esinettä ja maksoi niistä täsmälleen 80 kultakolikkoa.
+
+                Mikä esine jäi ostamatta?`,
+        options: ["Kultainen kissapatsas", "Pikkuruinen sfinksi", "Suuren krokotiilin kallo", "Niilin pyhistä vesistä peräisin oleva kasvi", "Hiekkamatto täynnä hieroglyfejä"],
+        correctAnswer: "Suuren krokotiilin kallo"
+    },
+    {
+        type: "input",
+        question: `Muinaisen Lukujen Hallin pylväiden keskellä, Ra:n pyramidin uumenissa, seinään on raaputettu salaperäinen lukujono:
+
+                4, 5, 9, 14, ...
+
+                Se, joka onnistuu ratkaisemaan tämän lukujen polun, voi jatkaa matkaansa eteenpäin.
+
+                Mikä luku tulee seuraavaksi?`,
+        correctAnswer: "23"
+    },
+    {
+        type: "input",
+        question: `Faarao sai 1000 kultakolikkoa kauppiailta. Hän päätti, että 25 % summasta käytetään jumala Ran temppelien kunnostamiseen ja 15 % Niilin kalastusalusten parantamiseen. Loput kultakolikot käytetään tiedon kirjaston rakentamiseen.
+                    
+                Kuinka monta kolikkoa jää kirjastoa varten?`,
+        correctAnswer: "600"
+    },
+    {
+        type: "multiple-choice",
+        question: `Polttavan auringon alla, keskellä autiomaata, faarao Khufu lähetti kamelikaravaanin viemään lahjoja kolmeen eri temppeliin. Jokainen neljästä karavaanista kantaa 36 lahjakoria. Jokaisessa temppelissä lahjat jaetaan tasan kuuden papin kesken.
+        
+                Kuinka monta koria kukin pappi saa?`,
+        options: ["6 koria", "8 koria", "12 koria", "18 koria"],
+        correctAnswer: "8 koria"
+    },
+    {
+        type: "input",
+        question: `Auringon temppelissä ylipappi Nefer laski auringon kultalevyjä, jotka koristivat pylväitä. Ensin hän ripusti 48 kultaista levyä. Seuraavana päivänä hän lisäsi vielä 27. Kolmantena päivänä 15 levyä katosi hiekkamyrskyssä...
+        
+                Kuinka monta levyä jäi pylväisiin?`,
+        correctAnswer: "70"
+    },
+    {
+        type: "multiple-choice",
+        question: `Syvällä Anubiksen labyrintissä, aarteiden kammion edessä seisoo kolme vartijaa. He vartioivat kolme ovea: vain yksi ovi johtaa aarteeseen, muut kaksi — ikuiseen harhaan.
+                Jotta tietäisi, mihin oveen astua, täytyy ratkaista matemaattinen arvoitus, jonka vartijat antavat:
+                
+                Vartija A sanoo: "Luku, jonka saat, kun lisäät 20 ja 35, ja sitten jaat summan viidellä, kertoo oikean oven numeron."
+                Vartija B sanoo: "Vähennä 50:stä 40 %, sitten kerro se kahdella - saat oikean oven numeron."
+                Vartija C sanoo: "Jos kerrot 7 kolmella ja vähennät tuloksesta 12, pääset oikean oven taakse."
+
+                Mikä ovi johtaa aarteeseen?`,
+        options: ["Ovi 7", "Ovi 9", "Ovi 12"],
+        correctAnswer: "Ovi 9"
+    }
+
 ];
 
 document.addEventListener("DOMContentLoaded", () => {

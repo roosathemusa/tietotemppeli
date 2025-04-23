@@ -3,13 +3,12 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 body {
     font-family: 'Irish Grover', regular !important;
     color: #091915;
-    /* overflow-y: auto; */
-    /* overflow: hidden; */
     padding: 0;
     margin: 0;
 }
@@ -62,7 +61,6 @@ header p {
     font-size: 1rem;
 }
 
-
 /* h2 {
     font-family: 'Irish Grover', regular;
     color: #091915;
@@ -71,13 +69,12 @@ header p {
 .bg-image {
     background-image: url('../images/tausta.jpg'); /* This image was created with AI via pollo.ai */
     background-size: cover;
-    background-position: center;
-    height: 100vh;
+    background-position: bottom center;
+    position: absolute;
+    height: 90vh;
     width: 100%;
-    /* padding-bottom: 50px; */
     padding: 0;
     margin: 0;
-    padding-top: 80px;
 
 }
 
