@@ -9,6 +9,20 @@ const questions = [
         correctAnswer: "500"
     },
     {
+        type: "multiple-choice",
+        question: `Syvällä pyramidin sisällä, temppelissä täynnä loitsuja ja hiekan peittämiä hieroglyfejä, 
+            muinainen lisko-kapteeni on jättänyt jälkeensä arvoituksen...
+
+            "Kolme sammakkoa — Dorris, Borris ja Morris — auttavat minua vartioimaan aarteita. Varmistin vaa'an avulla, että jokainen heistä on oikeassa painossa. Mutta muista: muinaisessa vaa'assa voi punnita vain kaksi sammakkoa kerrallaan..."
+            
+            Vaa'an mittaukset:
+            - Dorris ja Borris painavat yhteensä 12 g.
+            - Borris ja Morris painavat yhteensä 16 g.
+            - Dorris ja Morris painavat yhteensä 14 g.`,
+        options: ["Dorris: 5 g, Borris: 7 g, Morris: 9 g", "Dorris: 6 g, Borris: 8 g, Morris: 10 g", "Dorris: 4 g, Borris: 6 g, Morris: 8 g"],
+        correctAnswer: "Dorris: 5 g, Borris: 7 g, Morris: 9 g"
+    },
+    {
         type: "input",
         question: `Pölyn peittämä kirjoitus kiviseinällä paljastaa muinaisen arvoituksen...
 
@@ -25,25 +39,14 @@ const questions = [
     },
     {
         type: "multiple-choice",
-        question: `Syvällä pyramidin sisällä, temppelissä täynnä loitsuja ja hiekan peittämiä hieroglyfejä, 
-            muinainen lisko-kapteeni on jättänyt jälkeensä arvoituksen...
-            "Kolme sammakkoa — Dorris, Borris ja Morris — auttavat minua vartioimaan aarteita. Varmistin vaa'an avulla, että jokainen heistä on oikeassa painossa. Mutta muista: muinaisessa vaa'assa voi punnita vain kaksi sammakkoa kerrallaan..."
-            
-            Vaa'an mittaukset:
-            - Dorris ja Borris painavat yhteensä 12 g.
-            - Borris ja Morris painavat yhteensä 16 g.
-            - Dorris ja Morris painavat yhteensä 14 g.`,
-        options: ["Dorris: 5 g, Borris: 7 g, Morris: 9 g", "Dorris: 6 g, Borris: 8 g, Morris: 10 g", "Dorris: 4 g, Borris: 6 g, Morris: 8 g"],
-        correctAnswer: "Dorris: 5 g, Borris: 7 g, Morris: 9 g"
-    },
-    {
-        type: "multiple-choice",
         question: `Keidassaaren hiekkojen keskellä, missä palmut humisevat ja tuuli kuiskii, viisas lisko Taiger kokoaa koristeita pyhään Anubiksen akvaarioonsa. Muinaisten aikojen basaarista hän löysi viisi taianomaista esinettä:
+                
                 - Kultainen kissapatsas - 16 kultakolikkoa
                 - Pikkuruinen sfinksi - 35 kultakolikkoa
                 - Suuren krokotiilin kallo - 22 kultakolikkoa
                 - Niilin pyhistä vesistä peräisin oleva kasvi - 17 kultakolikkoa
                 - Hiekkamatto täynnä hieroglyfejä - 12 kultakolikkoa.
+
                 Taiger valitsi tarkalleen neljä esinettä ja maksoi niistä täsmälleen 80 kultakolikkoa.
 
                 Mikä esine jäi ostamatta?`,
@@ -60,6 +63,17 @@ const questions = [
 
                 Mikä luku tulee seuraavaksi?`,
         correctAnswer: "23"
+    },
+    {
+        type: "multiple-choice",
+        question: `Oppineiden karavaani kuljetti yhteensä 84 tietoviisautta kantavaa papyrusrullaa.
+                Rullat oli jaettu tasaisesti 7 kantajan kesken.
+                Kun he saapuivat temppelin portille, yksi kantajista lähetettiin kiireesti takaisin hakemaan unohtunutta sinettiä.
+                Hänen rullansa jaettiin tasaisesti muiden kantajien kesken.
+                
+                Kuinka monta pyhää öljyastiaa on nyt jokaisessa jäljelle jääneessä viidessä vaunussa?`,
+        options: ["12", "13", "14", "15"],
+        correctAnswer: "14"
     },
     {
         type: "input",
@@ -113,27 +127,29 @@ document.addEventListener("DOMContentLoaded", () => {
 function checkAnswer() {
     const current = questions[currentQuestionIndex];
     const result = document.getElementById("result");
+    const kissaImage = document.getElementById("kissaImage");
     let userAnswer = "";
 
     if (current.type === "input") {
         userAnswer = document.getElementById("textAnswer").value.trim();
+        if (userAnswer === "") {
+            showAlert("Syötä vastaus");
+            return;
+        }
     } else if (current.type === "multiple-choice") {
         const selectedOption = document.querySelector('input[name="option"]:checked');
         if (!selectedOption) {
-            result.textContent = "Valitse jokin vaihtoehto.";
-            result.style.color = "orange";
+            showAlert("Valitse jokin vaihtoehto");
             return;
         }
         userAnswer = selectedOption.value;
     }
 
     if (userAnswer === current.correctAnswer) {
-        result.textContent = "Oikein!";
-        result.style.color = "green";
         score++;
+        kissaImage.src = "../images/happy-cleopatra-kissa.png"
     } else {
-        result.textContent = "Väärin.";
-        result.style.color = "red";
+        kissaImage.src = "../images/sad-cleopatra-kissa.png"
     }
 
     setTimeout(() => {
@@ -143,12 +159,23 @@ function checkAnswer() {
         } else {
             showFinalScore();
         }
-    }, 1800);
+    }, 2000);
+}
+
+function showAlert(message) {
+    const alertBox = document.getElementById("alertBox");
+    alertBox.textContent = message;
+    alertBox.classList.add("show");
+
+    setTimeout(() => {
+        alertBox.classList.remove("show");
+    }, 1500); 
 }
 
 function loadNextQuestion() {
     const current = questions[currentQuestionIndex];
-    // document.getElementById("questionText").textContent = current.question;
+    const kissaImage = document.getElementById("kissaImage");
+    kissaImage.src = "../images/cleopatra-kissa.png"
     document.getElementById("questionText").innerHTML = current.question.replace(/\n/g, "<br>");
 
 
