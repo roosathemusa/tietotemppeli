@@ -51,7 +51,7 @@ body, html {
   padding: 0;
   height: 100%;
   width: 100%;
-
+}
 #game-title {
   font-family: 'Irish Grover', cursive;
   font-size: 3rem;
@@ -85,8 +85,7 @@ body, html {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;    
-  verflow-wrap: break-word; /* estää tekstin tönimästä ulos */
-}
+  overflow-wrap: break-word; 
 
 #game-instructions {
     font-size: 1.4rem;
@@ -105,26 +104,40 @@ body, html {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
-  padding: 30px;
+  padding: 2vw;
   text-align: center;
   color: #3a2e1d;
   font-size: 16px;
   line-height: 1.6;
+
+}
+
+
+#game .row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: nowrap; /* estää rivien hajoamisen */
+  margin: 0.5vh auto;
+  margin-bottom: 0.5vw;
+}
+
+#game .word {
+  flex: 1 1 auto;
+  min-width: 0; /* estää ylivuodon */
+  font-size: 0.9rem;
+  padding: 10px;
+  max-width: none; /* ei rajoita kokoa keinotekoisesti */
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 #game #pyramid {
   margin-top: 5vh;
   max-width: 100%;
-  margin: 30px auto;
+  margin: 5vh auto;
 }
 
-#game .row {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin: 10px auto;
-}
 
 #game .word.final {
   flex-grow: 1;
@@ -148,11 +161,10 @@ body, html {
   color: #3a2e1d;
   background: linear-gradient(to top left, #f2d7a0, #e0b96c);
   box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-  min-width: 60px;
   max-width: 140px;
   flex: 1 1 auto;
   display: inline-block;
-  white-space: nowrap;
+  white-space: normal;
   text-transform: uppercase;
 }
 
@@ -227,7 +239,19 @@ body, html {
   font-weight: bold;
   color: #5b3c11;
 }
-
+@media (max-width: 600px) {
+  #game .word {
+      min-width: 40px;  /* Smaller words on small screens */
+  }
+  #game {
+    padding: 15px; /* Less padding on small screens */
+  }
+}
+@media (max-width: 480px) {
+  #game {
+      font-size: 14px; /* Slightly smaller font */
+  }
+}
   @media (max-width: 576px) {
 
     #navbarNav {
@@ -252,4 +276,66 @@ body, html {
         background-color: #184236;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
+}
+
+@media (max-width: 200px) {
+  .image-side img {
+    display: none;
+  }
+}
+@media (orientation: landscape) {
+  main#game {
+    width: 100%;
+    height: auto; /* Or a calculated height based on aspect ratio */
+  }
+}
+
+@media (max-width: 375px) { /* Or a more specific size range */
+  #game {
+    width: 100%; /* Ensure it takes the full screen width */
+    height: auto; /* Let the content determine the height, or use a percentage/vh */
+    min-height: 100vh; /* Or a more appropriate minimum for iPhone SE content */
+    padding: 15px; /* Adjust padding as needed for the smaller screen */
+    box-sizing: border-box; /* Include padding in width and height calculation */
+  }
+}
+@media (max-width: 400px) {
+  #game {
+    background-image: none;
+    background-color: #f4edd3;
+    padding: 3vw;
+    font-size: 14px;
+     }
+
+  #game .word {
+    font-size: 0.5rem;
+    padding: 10px 14px;
+    max-width: 100px;
+  }
+
+  #game .row {
+    gap: 6px;
+    margin: 0.5vh auto;
+  }
+
+  #check-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .instructions-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+  }
+
+  .image-side img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+
+  #game-title {
+    font-size: 1.5rem;
+    margin-top: 5vh;
+  }
 }
