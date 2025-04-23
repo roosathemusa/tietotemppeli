@@ -1,3 +1,8 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 
 header {
   background-color: #184236;
@@ -86,22 +91,24 @@ body, html {
   margin: 0 auto;
   text-align: center;    
   overflow-wrap: break-word; 
-
-#game-instructions {
-    font-size: 1.4rem;
-    max-width: 1000px;
-    margin: 0 auto 50px auto;
-    color: #5b3c11;
-    line-height: 1.6;
-    font-family: 'Irish Grover';
-    text-align: center;   
-    white-space: nowrap; 
-  }
 }
+
+/* PELIN OHJEET */
+#game-instructions {
+  font-size: 1.4rem;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  color: #5b3c11;
+  line-height: 1.6;
+  font-family: 'Irish Grover';
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* PELIALUE */
 #game {
   font-family: 'Segoe UI', 'Arial', sans-serif;
   background-image: url('../img/background4.png');
-  min-height: 100vh;
   background-size: cover;
   background-position: center;
   padding: 2vw;
@@ -109,50 +116,30 @@ body, html {
   color: #3a2e1d;
   font-size: 16px;
   line-height: 1.6;
-
+  min-height: 100dvh;
 }
 
-
-#game .row {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  flex-wrap: nowrap; /* estää rivien hajoamisen */
-  margin: 0.5vh auto;
-  margin-bottom: 0.5vw;
-}
-
-#game .word {
-  flex: 1 1 auto;
-  min-width: 0; /* estää ylivuodon */
-  font-size: 0.9rem;
-  padding: 10px;
-  max-width: none; /* ei rajoita kokoa keinotekoisesti */
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
+/* PYRAMIDI JA RIVIT */
 #game #pyramid {
   margin-top: 5vh;
   max-width: 100%;
   margin: 5vh auto;
 }
 
-
-#game .word.final {
-  flex-grow: 1;
+#game .row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+  margin: 0.5vh auto;
+  margin-bottom: 0.5vw;
 }
 
-#game #row-1 { flex: 1 1 20%; }
-#game #row-2 { flex: 1 1 40%; }
-#game #row-3 { flex: 1 1 60%; }
-#game #row-4 { flex: 1 1 80%; }
-#game #row-5 { flex: 1 1 100%; }
-
+/* SANANAPPULAT */
 #game .word {
-  padding: 14px 20px;
   font-size: 1rem;
   font-weight: 600;
+  padding: 14px 20px;
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
@@ -173,6 +160,7 @@ body, html {
   box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
 }
 
+/* ERIKOISTILAT */
 #game .word.selected {
   outline: 3px dashed #008080;
   background: linear-gradient(to top left, #e0f7d1, #a8ddb5);
@@ -204,6 +192,7 @@ body, html {
   border-radius: 10px;
 }
 
+/* YHDISTETYT SANAT */
 #game .merged-words {
   display: flex;
   flex-wrap: nowrap;
@@ -215,8 +204,17 @@ body, html {
   white-space: nowrap;
 }
 
-#game #check-button {
-  margin-top: 20px;
+/* PYRAMIDIN RIVIEN LAAJUUDET */
+#game #row-1 { flex: 1 1 20%; }
+#game #row-2 { flex: 1 1 40%; }
+#game #row-3 { flex: 1 1 60%; }
+#game #row-4 { flex: 1 1 80%; }
+#game #row-5 { flex: 1 1 100%; }
+
+/* NAPIT YHTEISELLÄ LUOKALLA */
+.game-button {
+  margin: 5px;
+  margin-top: 1rem;
   font-size: 1.2rem;
   padding: 12px 22px;
   background-color: #8b5e3c;
@@ -228,114 +226,77 @@ body, html {
   box-shadow: 0 4px 6px rgba(0,0,0,0.25);
 }
 
-#game #check-button:hover {
+.game-button:hover {
   background-color: #a66e40;
   transform: scale(1.05);
 }
 
+/* VIESTIT */
 #game #message {
   margin-top: 18px;
   font-size: 1.2rem;
   font-weight: bold;
   color: #5b3c11;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
 }
-@media (max-width: 600px) {
+
+
+@media (max-width: 768px) {
+
+  #game-instructions {
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+
   #game .word {
-      min-width: 40px;  /* Smaller words on small screens */
+    font-size: 0.95rem;
+    padding: 12px 16px;
   }
-  #game {
-    padding: 15px; /* Less padding on small screens */
-  }
-}
-@media (max-width: 480px) {
-  #game {
-      font-size: 14px; /* Slightly smaller font */
-  }
-}
-  @media (max-width: 576px) {
 
-    #navbarNav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        z-index: 1200;
-        background-color: #184236;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-    
-}
-
-@media (max-height: 500px) {
-    #navbarNav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        z-index: 1200;
-        background-color: #184236;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-}
-
-@media (max-width: 200px) {
-  .image-side img {
-    display: none;
+  .game-button {
+    font-size: 1rem;
+    padding: 10px 18px;
   }
-}
-@media (orientation: landscape) {
-  main#game {
-    width: 100%;
-    height: auto; /* Or a calculated height based on aspect ratio */
-  }
-}
 
-@media (max-width: 375px) { /* Or a more specific size range */
   #game {
-    width: 100%; /* Ensure it takes the full screen width */
-    height: auto; /* Let the content determine the height, or use a percentage/vh */
-    min-height: 100vh; /* Or a more appropriate minimum for iPhone SE content */
-    padding: 15px; /* Adjust padding as needed for the smaller screen */
-    box-sizing: border-box; /* Include padding in width and height calculation */
-  }
-}
-@media (max-width: 400px) {
-  #game {
+    font-size: 14px;
+    padding: 4vw;
     background-image: none;
     background-color: #f4edd3;
-    padding: 3vw;
-    font-size: 14px;
-     }
+  }
+  .image-side {
+    display: none;
+}
+
+@media (max-width: 480px) {
+
+  #game-instructions {
+    font-size: 0.9rem;
+  }
 
   #game .word {
-    font-size: 0.5rem;
-    padding: 10px 14px;
+    font-size: 0.75rem;
+    padding: 8px 10px;
     max-width: 100px;
   }
 
+  .game-button {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  #game {
+    font-size: 12px;
+    padding: 3vw 2vw;
+    background-image: none;
+    background-color: #f4edd3;
+  }
+
   #game .row {
-    gap: 6px;
-    margin: 0.5vh auto;
-  }
+    gap: 4px;
+    margin-bottom: 0.4vh;
 
-  #check-button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
   }
-
-  .instructions-container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2vh;
-  }
-
-  .image-side img {
-    max-width: 150px;
-    margin-bottom: 1rem;
-  }
-
-  #game-title {
-    font-size: 1.5rem;
-    margin-top: 5vh;
-  }
-}
+  .image-side {
+    display: none;
+}}

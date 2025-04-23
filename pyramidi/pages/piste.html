@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Pistesivu</title>
+</head>
+<body>
+  <h1>Sait pisteitä:</h1>
+  <p id="tulokset">Ladataan...</p>
+
+  <script>
+    const pisteet = sessionStorage.getItem('pisteet') || 0;
+    document.getElementById('tulokset').textContent = `${pisteet} / 10 pistettä`;
+  </script>
+</body>
+</html>
