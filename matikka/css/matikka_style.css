@@ -61,27 +61,27 @@ header p {
     font-size: 1rem;
 }
 
-/* h2 {
-    font-family: 'Irish Grover', regular;
-    color: #091915;
-} */
-
 .bg-image {
     background-image: url('../images/tausta.jpg'); /* This image was created with AI via pollo.ai */
     background-size: cover;
     background-position: bottom;
-    position: absolute;
-    height: 100vh;
+    position: absolute; 
+    min-height: 100vh;
+    height: auto;  
     width: 100%;
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
+    z-index: 0;
+    top: 0;
+    left: 0;
 }
 
 .question-box {
     background-color: #fef8cb;
     width: 100%;
+    min-width: 500px;
     max-width: 900px;
     height: auto;
+    min-height: 200px;
     margin: 0 auto;
     font-size: 1.1rem;
     padding: 30px;
@@ -90,10 +90,6 @@ header p {
     overflow: hidden;
     text-align: start;
 }
-
-/* #questionText, #result, .form-control, label {
-    font-size: 1rem;
-} */
 
 .answer-input {
     width: 125px !important; 
@@ -170,13 +166,19 @@ input[type="number"] {
 }
 
 
-
 @media (max-width: 576px) {
-    body {
-        font-size: 1.2rem;
+    html, body {
+        overflow: scroll;
+        font-size: 0.75rem;
+    }
+    .bg-image{
+        height: auto;
+        max-height: 200vh;
     }
     .question-box {
-        padding: 20px;
+        margin: 40px 30px 30px 30px;
+        min-width: 300px;
+        max-width: 500px;
     }
     #navbarNav {
         position: absolute;
@@ -187,7 +189,13 @@ input[type="number"] {
         background-color: #184236;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
-
+    .kissa-image {
+        width: 100px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
     body {
@@ -214,5 +222,11 @@ input[type="number"] {
         background-color: #184236;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
+
+    html, body {
+        overflow: scroll;
+    }
+    
+
 }
 
