@@ -73,82 +73,78 @@ h1 {
    
 }
 
-
 h2 {
-        color: #34495e;
-        font-family: 'Irish Grover', regular;
-        font-size: clamp(2rem, 6vw, 75px);
-        padding-bottom: 10px;
-        margin-bottom: 20px; 
-        text-align: center;
-    }
-
+    color: #34495e;
+    font-family: 'Irish Grover', cursive;
+    font-size: clamp(2rem, 6vw, 75px);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 .section {
     background-color: rgba(250, 224, 187, 0.9);
     padding: 20px;
-    margin: 50px auto; 
-    width: 80%; 
+    margin: 50px auto 20px;
+    width: 80%;
     border-radius: 10px;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+}
+
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    font-family: 'Irish Grover', cursive;
+    line-height: 1.5;
 }
 
 p {
-    font: irish;
     color: #34495e;
-    font-size: 24px;
-    margin-bottom: 20px; 
-    line-height: 1.5; 
-}
-@media (max-width: 576px) {
-    .custom-center-box {
-        transform: translateY(50%) translateX(-50%);
-    }
-
-    .custom-fxs {
-        font-size: 1.2rem;
-    }
-
-    .custom-txs {
-        font-size: 1rem;
-    }
-
-    .custom-nappi {
-        font-size: 0.8rem;
-        padding: 10px 20px;
-        width: 80px;
-    }
+    font-family: 'Irish Grover', cursive;
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-
-@media (min-width: 576px) {
-    .custom-txs {
-        font-size: 1.25rem;
-    }
+.grid-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    align-items: center;
 }
-  
 
-@media (min-width: 768px) {
-    .custom-center-box {
-        transform: translateY(40%) translateX(-50%);
+.grid-row img {
+    width: 50%;
+    height: auto;
+    max-width: 200px;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+img.img-fluid {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .grid-row {
+        grid-template-columns: 1fr;
     }
-
-    .custom-txs {
-        font-size: 1.5rem;
+    .grid-row + .grid-row {
+        margin-top: 3rem; /* väli kahden gridin väliin */
     }
     
-}
-
-@media (min-width: 992px) {
-    .custom-center-box {
-        transform: translateY(30%) translateX(-50%);
-    }
-
-    .custom-txs {
-        font-size: 2rem;
+    .grid-row img {
+        max-width: 100%;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
     }
 }
