@@ -62,13 +62,29 @@ const questions = [
             { text: "Vesistöjen jumala", correct: false },
             { text: "Auringon jumala", correct: true },
         ]
+    },
+    {
+        question: "Mikä on muumio?",
+        answers: [
+            { text: "Zombi", correct: false },
+            { text: "Edesmennyt ihminen joka on kääritty siteisiin", correct: true },  // Korjattu
+            { text: "Kleopatra", correct: false },
+        ]
+    },
+    {
+        question: "Kuka oli Kleopatra?",
+        answers: [
+            { text: "Yksi Egyptin entisistä hallitsijoista", correct: true },
+            { text: "Gladiator", correct: false },
+            { text: "Siivooja", correct: false },
+        ]
     }
 ];
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
-const kuva = document.getElementById("banner-kuva"); 
+const kuva = document.getElementById("banner-kuva");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -77,7 +93,7 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Seuraava";
-    kuva.src = "../kuvat/neutral.png"; 
+    kuva.src = "../kuvat/neutral.png";
     showQuestion();
 }
 
@@ -105,7 +121,6 @@ function resetState() {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 
-    
     kuva.src = "../kuvat/neutral.png";
 }
 
@@ -116,10 +131,10 @@ function selectAnswer(e) {
     if (isCorrect) {
         selectedBtn.classList.add("correct");
         score++;
-        kuva.src = "../kuvat/good.png"; 
+        kuva.src = "../kuvat/good.png";
     } else {
         selectedBtn.classList.add("incorrect");
-        kuva.src = "../kuvat/anger test.png"; 
+        kuva.src = "../kuvat/anger test.png";
     }
 
     Array.from(answerButtons.children).forEach(button => {
@@ -144,6 +159,9 @@ nextButton.addEventListener("click", () => {
 function showScore() {
     resetState();
     questionElement.innerHTML = `Sait ${score} / ${questions.length} oikein!`;
+
+    sessionStorage.setItem('historia', score); 
+
     nextButton.innerHTML = "Aloita alusta";
     nextButton.style.display = "block";
 

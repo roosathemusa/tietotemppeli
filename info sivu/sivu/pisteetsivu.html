@@ -1,127 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../tyylikansio/tyyli.css">
-    <title>Pisteet</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../tyylikansio/tyyli.css"/>
+  <title>Pisteet</title>
 </head>
 <body>
-    <header class="navbar navbar-expand-lg p-3" style="background-color: #184236;">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-          <p class="m-0 h2 text-light">TIETOTEMPPELI</p>
-    
-          <!-- HUOM: Bootstrap 4 käyttää data-toggle / data-target -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <header class="navbar navbar-expand-lg p-3" style="background-color: #184236;">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <p class="m-0 h2 text-light">TIETOTEMPPELI</p>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="row w-100 flex-wrap">
+        <div class="col-4 col-md-2 p-2">
+          <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>MATIKKA</span></a>
         </div>
-    
-        <!-- Kollapsoituva valikko -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="row w-100 flex-wrap">
-            <div class="col-4 col-md-2 p-2">
-              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>MATIKKA</span></a>
-            </div>
-            <div class="col-4 col-md-2 p-2">
-              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>ÄIKKÄ</span></a>
-            </div>
-            <div class="col-4 col-md-2 p-2">
-              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>HISSA</span></a>
-            </div>
-            <div class="col-4 col-md-2 p-2">
-              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>YMPPÄ</span></a>
-            </div>
-            <div class="col-4 col-md-2 p-2">
-              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>PISTEET</span></a>
-            </div>
-            <div class="col-4 col-md-2 p-2">
-              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>INFO</span></a>
-            </div>
-          </div>
+        <div class="col-4 col-md-2 p-2">
+          <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>ÄIKKÄ</span></a>
         </div>
-      </header>
-    
-    
+        <div class="col-4 col-md-2 p-2">
+          <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>HISSA</span></a>
+        </div>
+        <div class="col-4 col-md-2 p-2">
+          <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>YMPPÄ</span></a>
+        </div>
+        <div class="col-4 col-md-2 p-2">
+          <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>PISTEET</span></a>
+        </div>
+        <div class="col-4 col-md-2 p-2">
+          <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>INFO</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-
-    <div class="img_background"></div>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col text-center">
-                <div class="image-box">
-                    <img class="kiisu img-fluid" src="../kuvakansio/kiisu ilman bb.png" alt="kuva">
-                </div>
-            </div>
-            <div class="col text-center">
-                <div class="image-box">
-                    <img class="koira img-fluid" src="../kuvakansio/koira nbb.png" alt="kuva">
-                </div>
-            </div>
-            <div class="col text-center">
-                <div class="image-box">
-                    <img class="koira2 img-fluid" src="../kuvakansio/koira2 no bb.png" alt="kuva">
-                </div>
-            </div>
-            <div class="col text-center">
-                <div class="image-box">
-                    <img class="lintu img-fluid" src="../kuvakansio/pöllö no bg.png" alt="kuva">
-                </div>
-            </div>
+  <div class="img_background"></div>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col text-center">
+        <div class="image-box">
+          <img class="kiisu img-fluid" src="../kuvakansio/kiisu ilman bb.png" alt="kuva">
         </div>
-
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-3">
-                <div class="tietobox mathematics">
-                    <h3>Matematiikka</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="tietobox history">
-                    <h3>Historia</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="tietobox science">
-                    <h3>Luonnontiede</h3>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="tietobox wordgame">
-                    <h3>Sanapeli</h3>
-                </div>
-            </div>
+      </div>
+      <div class="col text-center">
+        <div class="image-box">
+          <img class="koira img-fluid" src="../kuvakansio/koira nbb.png" alt="kuva">
         </div>
-
-        <div class="row justify-content-center mt-4">
-            <div class="col text-center">
-                <div class="score-box1">
-                    <div class="score">0/10</div>
-                </div>
-            </div>
-            <div class="col text-center">
-                <div class="score-box2">
-                    <div class="score">0/10</div>
-                </div>
-            </div>
-            <div class="col text-center">
-                <div class="score-box3">
-                    <div class="score">0/10</div>
-                </div>
-            </div>
-            <div class="col text-center">
-                <div class="score-box4">
-                    <div class="score">0/10</div>
-                </div>
-            </div>
+      </div>
+      <div class="col text-center">
+        <div class="image-box">
+          <img class="koira2 img-fluid" src="../kuvakansio/koira2 no bb.png" alt="kuva">
         </div>
+      </div>
+      <div class="col text-center">
+        <div class="image-box">
+          <img class="lintu img-fluid" src="../kuvakansio/pöllö no bg.png" alt="kuva">
+        </div>
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-3">
+        <div class="tietobox mathematics">
+          <h3>Matematiikka</h3>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="tietobox history">
+          <h3>Historia</h3>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="tietobox science">
+          <h3>Luonnontiede</h3>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="tietobox wordgame">
+          <h3>Sanapeli</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col text-center">
+        <div class="score-box1">
+          <div class="score" id="score-matikka">0/10</div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="score-box2">
+          <div class="score" id="score-historia">0/10</div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="score-box3">
+          <div class="score" id="score-luonnontiede">0/10</div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <div class="score-box4">
+          <div class="score" id="score-sanapeli">0/10</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!--  SCRIPT to Load Scores -->
+  <script>
+    
+    const matikka = sessionStorage.getItem('matikka') ?? 0;
+    const historia = sessionStorage.getItem('historia') ?? 0;
+    const luonnontiede = sessionStorage.getItem('luonnontiede') ?? 0;
+    const sanapeli = sessionStorage.getItem('sanapeli') ?? 0;
+
+    
+    document.getElementById('score-matikka').textContent = `${matikka}/10`;
+    document.getElementById('score-historia').textContent = `${historia}/10`;
+    document.getElementById('score-luonnontiede').textContent = `${luonnontiede}/10`;
+    document.getElementById('score-sanapeli').textContent = `${sanapeli}/10`;
+  </script>
 </body>
 </html>
