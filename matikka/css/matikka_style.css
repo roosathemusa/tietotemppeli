@@ -64,7 +64,7 @@ header p {
 .bg-image {
     background-image: url('../images/tausta.jpg'); /* This image was created with AI via pollo.ai */
     background-size: cover;
-    background-position: bottom;
+    background-position: bottom left;
     position: absolute; 
     min-height: 100vh;
     height: auto;  
@@ -77,13 +77,11 @@ header p {
 
 .question-box {
     background-color: #fef8cb;
-    width: 100%;
+    width: 80vw;
     min-width: 500px;
-    max-width: 900px;
-    height: auto;
+    max-width: 1200px;
     min-height: 200px;
-    margin: 0 auto;
-    font-size: 1.1rem;
+    margin: 50px auto;
     padding: 30px;
     position: relative;  
     z-index: 1;
@@ -92,7 +90,7 @@ header p {
 }
 
 .answer-input {
-    width: 125px !important; 
+    width: 125px !important;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -171,18 +169,19 @@ button, .button-answer {
 
 @media (max-width: 576px) {
     html, body {
-        overflow: scroll;
-        font-size: 0.75rem;
+        overflow-y: auto;
     }
     .bg-image{
         height: auto;
-        max-height: 200vh;
+    }
+    #questionText {
+        font-size: 1rem;
+    }
+    #optionsContainer {
+        font-size: 1rem;
     }
     .question-box {
         margin: 40px 30px 30px 30px;
-        max-width: auto;
-        min-width: 280px;
-
     }
     #navbarNav {
         position: absolute;
@@ -202,21 +201,80 @@ button, .button-answer {
     }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
-    body {
-        font-size: 1rem;
+    html, body {
+        overflow-y: auto;
+    }
+    #questionText {
+        font-size: 1.3rem;
+    }
+    #optionsContainer {
+        font-size: 1.3rem;
+    }
+
+    .question-box {
+        margin-top: 50px !important;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-    body {
+    html, body {
+        overflow-y: auto;
+    }
+    #questionText {
         font-size: 1.5rem;
     }
+    #optionsContainer {
+        font-size: 1.5rem;
+    }
+    .question-box {
+        margin-top: 50px !important;
+    }
+
 }
 @media (min-width: 992px) {
     .nav-link span {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
+    }
+    #questionText {
+        font-size: 1.5rem;
+    }
+    #optionsContainer {
+        font-size: 1.5rem;
     }
 }
 @media (max-height: 500px) {
+    html, body {
+        overflow-y: auto;
+    }
+    #startContainer {
+        margin-top: 100px !important;
+        min-width: 85vw !important;
+        padding: 20px !important;
+        min-height: 30px;
+    }
+    #startContainer h1 {
+        font-size: 1.3rem !important;
+    }
+    #startContainer p {
+        font-size: 1.1rem !important;
+    }
+    #questionText {
+        font-size: 1rem !important;
+    }
+    #optionsContainer {
+        font-size: 1rem !important;
+    }
+    .question-box {
+        margin-top: 40px !important;
+        min-width: 85vw !important;
+        min-height: auto;
+    }
+    .kissa-image {
+        width: 120px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
     #navbarNav {
         position: absolute;
         top: 100%;
@@ -226,11 +284,12 @@ button, .button-answer {
         background-color: #184236;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
-
-    html, body {
-        overflow: scroll;
-    }
-    
-
 }
-
+@media (min-height: 501px) {
+    html, body {
+        overflow-y: auto;
+    }
+    .question-box {
+        min-width: 85vw !important;
+    }
+}
