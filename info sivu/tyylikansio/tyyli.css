@@ -1,0 +1,368 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Irish Grover', cursive;
+}
+
+.img_background {
+    background-image: url('../kuvakansio/Näyttökuva 2025-03-27 131010.png');
+    background-size: cover; 
+    background-position: center; 
+    height: 100%;
+    width: 100%; 
+    position: absolute; 
+    z-index: -1; 
+}
+
+header {
+    background-color: #184236; 
+    color: rgb(247, 254, 201); 
+    text-align: left; 
+    padding: 20px; 
+}
+.image-box {
+    text-align: center; 
+        margin: 20px; 
+        width: 100%; 
+}
+
+.score-box {
+    width: 80px;
+    height: 80px; 
+    background-color: rgb(248, 223, 223); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-left: 80px; 
+    margin-top:60px
+}
+.score-box1 {
+    width: 80px;
+    height: 80px; 
+    background-color: rgb(248, 223, 223); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-left: 80px; 
+    margin-top:60px
+}
+.score-box2 {
+    width: 80px;
+    height: 80px; 
+    background-color: rgb(248, 223, 223); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-left: 80px; 
+    margin-top:60px
+}
+.score-box3 {
+    width: 80px;
+    height: 80px; 
+    background-color: rgb(248, 223, 223); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-left: 80px; 
+    margin-top:60px
+}
+.score-box4 {
+    width: 80px;
+    height: 80px; 
+    background-color: rgb(248, 223, 223); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-left: 80px; 
+    margin-top:60px
+}
+
+.tietobox {
+    padding: 10px; 
+    color: rgb(0, 0, 0); 
+}
+
+.tietobox.mathematics {
+    background-color: #FFC486; 
+}
+
+.tietobox.history {
+    background-color: #FFC486; 
+}
+
+.tietobox.science {
+    background-color: #FFC486; 
+}
+
+.tietobox.wordgame {
+    background-color: #FFC486; 
+}
+
+    
+   
+    
+@media (max-width: 768px) {
+    .score-container { 
+        display: flex; 
+        gap: 10px; 
+    }
+
+    .score-box {
+        width: 60px;
+        height: 60px; 
+    }
+    
+    .tietobox {
+        padding: 10px;
+        color: rgb(0, 0, 0); 
+    }
+    
+    .tietobox.mathematics {
+        background-color: #3498db; 
+    }
+    
+    .tietobox.history {
+        background-color: #e74c3c; /
+    }
+    
+    .tietobox.science {
+        background-color: #2ecc71; 
+    }
+    
+    .tietobox.wordgame {
+        background-color: #f39c12; 
+    }
+    
+
+    header {
+        padding: 15px; 
+    }
+
+    .row {
+        display: flex; 
+        flex-direction: row; 
+        align-items: center; 
+    }
+
+    .image-box {
+        text-align: center; 
+        margin: 20px; 
+    }
+
+    .img_background {
+        background-image: url('../kuvakansio/Näyttökuva 2025-03-27 131010.png');
+        background-size: cover; 
+        background-position: center; 
+        height: 100vh; 
+        width: 100vw; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+         
+    }
+    .score-box1 {
+        width: 80px;
+        height: 80px; 
+        background-color: rgb(123, 181, 243); 
+        border-radius: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin-left: 80px; 
+        margin-top:60px
+    }
+    .score-box2 {
+        width: 80px;
+        height: 80px; 
+        background-color: rgb(249, 111, 111); 
+        border-radius: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin-left: 80px; 
+        margin-top:60px
+    }
+    .score-box3 {
+        width: 80px;
+        height: 80px; 
+        background-color: rgb(106, 255, 116); 
+        border-radius: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin-left: 80px; 
+        margin-top:60px
+    }
+    .score-box4 {
+        width: 80px;
+        height: 80px; 
+        background-color: rgb(244, 255, 94); 
+        border-radius: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin-left: 80px; 
+        margin-top:60px
+    }
+}
+@media (max-width: 768px) {
+    .banner-kuva {
+        display: none;
+    }
+    .custom-nappi {
+        font-size: 0.8rem !important;
+        padding: 10px 20px !important;
+        width: 80px !important;
+        display: inline-block !important; /* Varmistaa, että nappi on näkyvissä */
+    }
+}
+@media (max-width: 576px){
+    header {
+        padding: 1rem;
+    }
+    p.h1 {
+        font-size: 1.8rem;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    #navbarNav {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        z-index: 1200; 
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    #background {
+        height: 50vh;
+    }
+    #caracther {
+        bottom: 1em;
+        left: 1em;
+        width: 120px;
+        max-width: none;
+    }
+
+    .custom-center-box {
+        transform: translateY(50%) translateX(-50%);
+    }
+    .custom-fxs {
+        font-size: 1.2rem;
+    }
+    .custom-txs {
+        font-size: 1rem;
+    }
+    .custom-nappi {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        width: 80px;
+    }
+}
+
+@media (min-width: 576px) {
+    .custom-txs {
+        font-size: 1.25rem;
+    }
+}
+  
+
+@media (min-width: 768px) {
+    .custom-center-box {
+        transform: translateY(40%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .custom-center-box {
+        transform: translateY(30%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 2rem;
+    }
+}
+
+@media (max-height: 500px) {
+    .custom-center-box {
+        padding: 10px !important;
+    }
+    .custom-fxs {
+        font-size: 0.9rem;
+    }
+    .custom-txs {
+        font-size: 0.8rem;
+    }
+    .custom-nappi {
+        height: 40px;
+        width: 100px;
+        font-size: 0.8rem;
+    }
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+}
+
+.navbar-toggler-icon {
+    background-color: #FCF3AE !important;
+    border-radius: 5px;
+
+}
+.nav-link {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url('../kuvakansio/nappi1.png') !important;
+    background-size: contain !important;   
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 100px;
+    height: 60px;
+    width: 100%;
+    max-width: 200px; 
+    box-sizing: border-box;
+}
+
+.nav-link:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+}
+
+.nav-link:active {
+    transform: translateY(4px);
+}
+
+.nav-link span {
+    z-index: 1;
+    font-size: 1rem;
+
+}
+.bg-image {
+    background-image: url('../kuvakansio/nappi1.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;    
+    z-index: -1;
+}

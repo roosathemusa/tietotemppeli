@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'Irish Grover', cursive;
+}
+body {
+    background-image: url("../kuvat/tausta.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #184236; 
+    color: rgb(247, 254, 201); 
+    text-align: left; 
+    padding: 20px; 
+}
+.app {
+    background: rgb(247, 254, 201);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+.app h1 {
+    font-weight: 600;
+    color: rgb(168, 155, 16);
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz {
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.btn{
+    background: #222 !important;
+    color: #ffffff !important;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px 0;
+    margin:10px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:all 0.3s;
+}
+.btn:hover{
+    background:#222;
+    color: #fff;
+}
+#next-btn{
+    background-color: red;
+    color:#fff;
+    font-weight: 500;
+    width: 150px;
+    border:0;
+    padding: 10px;
+    margin:20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+.correct {
+    background-color: greenyellow !important; 
+}
+
+.incorrect {
+    background-color: red !important; 
+}
+.banner-kuva {
+    position: absolute;
+    top: 115px;        
+    transform: translateX(-50%);
+    width: 220px;
+    height: auto;
+    z-index: 2;
+    left: 58%;
+}
+
+@media (max-width: 768px) {
+    .banner-kuva {
+        display: none;
+    }
+    .custom-nappi {
+        font-size: 0.8rem !important;
+        padding: 10px 20px !important;
+        width: 80px !important;
+        display: inline-block !important; 
+    }
+}
+@media (max-width: 576px){
+    header {
+        padding: 1rem;
+    }
+    p.h1 {
+        font-size: 1.8rem;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    #navbarNav {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        z-index: 1200; 
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    #background {
+        height: 50vh;
+    }
+    #caracther {
+        bottom: 1em;
+        left: 1em;
+        width: 120px;
+        max-width: none;
+    }
+
+    .custom-center-box {
+        transform: translateY(50%) translateX(-50%);
+    }
+    .custom-fxs {
+        font-size: 1.2rem;
+    }
+    .custom-txs {
+        font-size: 1rem;
+    }
+    .custom-nappi {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        width: 80px;
+    }
+}
+
+@media (min-width: 576px) {
+    .custom-txs {
+        font-size: 1.25rem;
+    }
+}
+  
+
+@media (min-width: 768px) {
+    .custom-center-box {
+        transform: translateY(40%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .custom-center-box {
+        transform: translateY(30%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 2rem;
+    }
+}
+
+@media (max-height: 500px) {
+    .custom-center-box {
+        padding: 10px !important;
+    }
+    .custom-fxs {
+        font-size: 0.9rem;
+    }
+    .custom-txs {
+        font-size: 0.8rem;
+    }
+    .custom-nappi {
+        height: 40px;
+        width: 100px;
+        font-size: 0.8rem;
+    }
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+}
+
+.navbar-toggler-icon {
+    background-color: #FCF3AE !important;
+    border-radius: 5px;
+
+}
+.nav-link {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url('../kuvat/nappi1.png') !important;
+    background-size: contain !important;   
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 100px;
+    height: 60px;
+    width: 100%;
+    max-width: 200px; 
+    box-sizing: border-box;
+}
+
+.nav-link:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+}
+
+.nav-link:active {
+    transform: translateY(4px);
+}
+
+.nav-link span {
+    z-index: 1;
+    font-size: 1rem;
+
+}
+.bg-image {
+    background-image: url('../kuvat/nappi1.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;    
+    z-index: -1;
+}
