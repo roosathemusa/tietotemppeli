@@ -45,7 +45,7 @@ header {
 }
 .btn{
     background: #222 !important;
-    color: #fff !important;
+    color: #ffffff !important;
     font-weight: 500;
     width: 100%;
     border: 1px solid #222;
@@ -97,7 +97,7 @@ header {
         font-size: 0.8rem !important;
         padding: 10px 20px !important;
         width: 80px !important;
-        display: inline-block !important; /* Varmistaa, että nappi on näkyvissä */
+        display: inline-block !important; 
     }
 }
 @media (max-width: 576px){
@@ -117,7 +117,7 @@ header {
         left: 0;
         width: 100%;
         z-index: 1200; 
-        background-color: #5feb97; 
+        background-color: #184236;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     
@@ -196,14 +196,17 @@ header {
         left: 0;
         width: 100%;
         z-index: 1200;
-        background-color: #305F43;
+        background-color: #184236;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
 }
 
-        
+.navbar-toggler-icon {
+    background-color: #FCF3AE !important;
+    border-radius: 5px;
 
+}
 .nav-link {
     font-weight: bold !important;
     color: #091915 !important;
@@ -232,9 +235,7 @@ header {
 .nav-link span {
     z-index: 1;
     font-size: 1rem;
-}
-.navbar-toggler{
-    background-color: aqua;
+
 }
 .bg-image {
     background-image: url('../kuvat/nappi1.png');

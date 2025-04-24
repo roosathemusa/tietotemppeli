@@ -9,9 +9,41 @@
     <title>Pisteet</title>
 </head>
 <body>
-    <header>
-        <h1>TIETOTEMPPELI</h1>
-    </header>
+    <header class="navbar navbar-expand-lg p-3" style="background-color: #184236;">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <p class="m-0 h2 text-light">TIETOTEMPPELI</p>
+    
+          <!-- HUOM: Bootstrap 4 käyttää data-toggle / data-target -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+    
+        <!-- Kollapsoituva valikko -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="row w-100 flex-wrap">
+            <div class="col-4 col-md-2 p-2">
+              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>MATIKKA</span></a>
+            </div>
+            <div class="col-4 col-md-2 p-2">
+              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>ÄIKKÄ</span></a>
+            </div>
+            <div class="col-4 col-md-2 p-2">
+              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>HISSA</span></a>
+            </div>
+            <div class="col-4 col-md-2 p-2">
+              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>YMPPÄ</span></a>
+            </div>
+            <div class="col-4 col-md-2 p-2">
+              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>PISTEET</span></a>
+            </div>
+            <div class="col-4 col-md-2 p-2">
+              <a class="nav-link btn d-flex align-items-center justify-content-center" href="#"><span>INFO</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
     
     
 
