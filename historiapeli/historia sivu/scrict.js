@@ -160,7 +160,7 @@ function showScore() {
     resetState();
     questionElement.innerHTML = `Sait ${score} / ${questions.length} oikein!`;
 
-    sessionStorage.setItem('historia', score); 
+    sessionStorage.setItem('hissa', score); 
 
     nextButton.innerHTML = "Aloita alusta";
     nextButton.style.display = "block";
