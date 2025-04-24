@@ -95,7 +95,7 @@ const questions = [
         question: `Auringon temppelissä ylipappi Nefer laski auringon kultalevyjä, jotka koristivat pylväitä. Ensin hän ripusti 48 kultaista levyä. Seuraavana päivänä hän lisäsi vielä 27. Kolmantena päivänä 15 levyä katosi hiekkamyrskyssä...
         
                 Kuinka monta levyä jäi pylväisiin?`,
-        correctAnswer: "70"
+        correctAnswer: "60"
     },
     {
         type: "multiple-choice",
@@ -228,6 +228,9 @@ function showFinalScore() {
     document.getElementById("result").textContent = "";
 
     document.getElementById("newGameBtn").style.display = "inline-block";
+
+    sessionStorage.setItem("matikka", score);
+
 }
 
 function startNewGame() {

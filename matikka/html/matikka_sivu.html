@@ -43,32 +43,32 @@
     <div class="bg-image d-flex justify-content-center align-items-center">
         <!-- Welcome screen with instructions -->
         <div class="container d-flex justify-content-center align-items-center">
-            <div id="startContainer" class="question-box p-4 rounded-4 shadow-lg text-center">
-                <h1>Tervetuloa Matikka-seikkailuun!</h1><br>
-                <p>Tässä pelissä ratkaiset matemaattisia arvoituksia.<br>
+            <div id="startContainer" class="question-box p-5 rounded-4 shadow-lg text-center">
+                <h1 class="fs-1">Tervetuloa Matikka-seikkailuun!</h1><br>
+                <p class="fs-3">Tässä pelissä ratkaiset matemaattisia arvoituksia.<br>
                     Vastaa kysymyksiin ja näe, kuinka monta saat oikein!</p><br>
                 <img src="../images/cleopatra-kissa.png" class="kissa-image img-fluid" alt="Cleopatra-kissa">
-                <button class="btn button-answer mt-3" id="startBtn">ALOITA</button>                    
+                <button class="btn button-answer mt-3 focus:outline-none focus:ring-0" id="startBtn">ALOITA</button>                    
             </div>
         </div>
 
         <!-- Game screen with questions -->
         <div id="gameContainer" style="display: none;">
             <div class="container mt-5 d-flex justify-content-center align-items-center">
-                <div class="question-box p-4 rounded-4 shadow-lg text-start">
-                    <p id="questionText"></p>
+                <div class="question-box p-5 rounded-4 shadow-lg text-start">
+                    <p id="questionText" class="fs-4"></p>
                     <div id="inputContainer" class="my-3" style="display:none;">
                         <input type="text" id="textAnswer" placeholder="Syötä vastaus" class="form-control answer-input" autocomplete="off">
                     </div>
-                    <div id="optionsContainer" class="my-3" style="display:none;"></div>
+                    <div id="optionsContainer" class="my-3 fs-4" style="display:none;"></div>
                     <div class="d-flex justify-content-center mt-3">
                         <button class="btn button-answer" id="checkBtn">TARKISTA</button>
                     </div>
                     <img id="kissaImage" src="../images/cleopatra-kissa.png" class="kissa-image img-fluid" alt="Cleopatra-kissa">  <!-- This image was created with AI via pollo.ai --> 
                     <div class="d-flex justify-content-center mt-4">
-                        <button class="btn button-answer" id="newGameBtn" style="display:none;">ALUSTA</button>
+                        <button class="btn button-answer focus:outline-none focus:ring-0" id="newGameBtn" style="display:none;">ALUSTA</button>
                     </div>
-                    <p id="result" class="mt-3 text-center fw-bold"></p>
+                    <p id="result" class="mt-3 text-center"></p>
                     <div id="alertBox" class="alert-box"></div>
                 </div>
             </div>

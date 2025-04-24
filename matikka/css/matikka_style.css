@@ -118,9 +118,6 @@ input[type="number"] {
     height: 60px;
     max-width: 200px; 
     box-sizing: border-box;
-    border: none;
-    outline: none;
-    user-select: none;
     display: inline-block;
 }
 
@@ -165,6 +162,12 @@ input[type="number"] {
     opacity: 1;
 }
 
+button, .button-answer {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
 
 @media (max-width: 576px) {
     html, body {
@@ -177,8 +180,9 @@ input[type="number"] {
     }
     .question-box {
         margin: 40px 30px 30px 30px;
-        min-width: 300px;
-        max-width: 500px;
+        max-width: auto;
+        min-width: 280px;
+
     }
     #navbarNav {
         position: absolute;
@@ -204,12 +208,12 @@ input[type="number"] {
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
     body {
-        font-size: 0.95rem;
+        font-size: 1.5rem;
     }
 }
 @media (min-width: 992px) {
-    body {
-        font-size: 0.9rem;
+    .nav-link span {
+        font-size: 0.7rem;
     }
 }
 @media (max-height: 500px) {
