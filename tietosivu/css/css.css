@@ -131,8 +131,14 @@ img.img-fluid {
     object-fit: contain;
     display: block;
     margin: 0 auto;
-    border-radius: 12px;
-}
+    border: 4px solid #f4c542;  /* kullanvärinen reunus */
+    border-radius: 12px;         /* pyöristetyt reunat */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* pehmeä varjo */
+    padding: 4px;                /* vähän tilaa reunuksen ja kuvan väliin */
+    background-color: F2c063;    /* tausta näkyviin esim. varjon kanssa */
+  }
+    
+
 
 @media (max-width: 768px) {
     .grid-row {
