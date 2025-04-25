@@ -300,3 +300,42 @@ body, html {
   .image-side {
     display: none;
 }}
+
+@media (max-width: 576px) {
+
+  #navbarNav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 1200;
+      background-color: #184236;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+}
+
+@media (min-width: 768px) {
+  .custom-center-box {
+      transform: translate(-50%, -50%);
+  }
+  .custom-txs {
+      font-size: 1.5rem;
+  }
+  .boy-image {
+      width: 15vw;
+      max-width: 180px;        
+      min-width: 120px;
+  }    
+}
+
+@media (max-height: 500px) {
+  #navbarNav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 1200;
+      background-color: #184236;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }}
