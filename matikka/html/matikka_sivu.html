@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="row w-100 flex-wrap">
                 <div class="col-4 col-md-2 p-2">
-                    <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>MATIKKA</span></a>
+                    <a class="nav-link btn d-flex align-items-center justify-content-center" href="../html/matikka_sivu.html"><span>MATIKKA</span></a>
                 </div>
                 <div class="col-4 col-md-2 p-2">
                     <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>ÄIKKÄ</span></a>
@@ -54,8 +54,8 @@
 
         <!-- Game screen with questions -->
         <div id="gameContainer" style="display: none;">
-            <div class="container mt-5 d-flex justify-content-center align-items-center">
-                <div class="question-box p-5 rounded-4 shadow-lg text-start">
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="question-box p-4 rounded-4 shadow-lg text-start">
                     <p id="questionText"></p>
                     <div id="inputContainer" class="my-3" style="display:none;">
                         <input type="text" id="textAnswer" placeholder="Syötä vastaus" class="form-control answer-input" autocomplete="off">
@@ -68,7 +68,7 @@
                     <div class="d-flex justify-content-center mt-4">
                         <button class="btn button-answer focus:outline-none focus:ring-0" id="newGameBtn" style="display:none;">ALUSTA</button>
                     </div>
-                    <p id="result" class="mt-3 text-center"></p>
+                    <p id="result" class="mt-3"></p>
                     <div id="alertBox" class="alert-box"></div>
                 </div>
             </div>

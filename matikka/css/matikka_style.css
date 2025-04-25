@@ -3,7 +3,8 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body {
@@ -77,11 +78,11 @@ header p {
 
 .question-box {
     background-color: #fef8cb;
-    width: 80vw;
-    min-width: 500px;
-    max-width: 1200px;
+    width: 70vw;
+    max-width: 1000px;
     min-height: 200px;
-    margin: 50px auto;
+    margin-top: 100px !important;
+    margin-bottom: 10px;
     padding: 30px;
     position: relative;  
     z-index: 1;
@@ -181,7 +182,8 @@ button, .button-answer {
         font-size: 1rem;
     }
     .question-box {
-        margin: 40px 30px 30px 30px;
+        width: 80vw !important;
+        margin-top: 80px !important;
     }
     #navbarNav {
         position: absolute;
@@ -205,14 +207,22 @@ button, .button-answer {
         overflow-y: auto;
     }
     #questionText {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     #optionsContainer {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
-
+    .kissa-image {
+        width: 120px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
     .question-box {
-        margin-top: 50px !important;
+        width: 80vw !important;
+        margin-top: 90px !important;
+        margin-bottom: 10px;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -220,13 +230,17 @@ button, .button-answer {
         overflow-y: auto;
     }
     #questionText {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     #optionsContainer {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
-    .question-box {
-        margin-top: 50px !important;
+    .kissa-image {
+        width: 135px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
     }
 
 }
@@ -235,10 +249,14 @@ button, .button-answer {
         font-size: 0.75rem;
     }
     #questionText {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     #optionsContainer {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    .question-box {
+        width: 80vw !important;
+        margin-top: 120px !important;
     }
 }
 @media (max-height: 500px) {
@@ -283,13 +301,5 @@ button, .button-answer {
         z-index: 1200;
         background-color: #184236;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-}
-@media (min-height: 501px) {
-    html, body {
-        overflow-y: auto;
-    }
-    .question-box {
-        min-width: 85vw !important;
     }
 }

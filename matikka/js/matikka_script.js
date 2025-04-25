@@ -40,13 +40,11 @@ const questions = [
     {
         type: "multiple-choice",
         question: `Keidassaaren hiekkojen keskellä, missä palmut humisevat ja tuuli kuiskii, viisas lisko Taiger kokoaa koristeita pyhään Anubiksen akvaarioonsa. Muinaisten aikojen basaarista hän löysi viisi taianomaista esinettä:
-                
                 - Kultainen kissapatsas - 16 kultakolikkoa
                 - Pikkuruinen sfinksi - 35 kultakolikkoa
                 - Suuren krokotiilin kallo - 22 kultakolikkoa
                 - Niilin pyhistä vesistä peräisin oleva kasvi - 17 kultakolikkoa
                 - Hiekkamatto täynnä hieroglyfejä - 12 kultakolikkoa.
-
                 Taiger valitsi tarkalleen neljä esinettä ja maksoi niistä täsmälleen 80 kultakolikkoa.
 
                 Mikä esine jäi ostamatta?`,
@@ -159,7 +157,7 @@ function checkAnswer() {
         } else {
             showFinalScore();
         }
-    }, 2000);
+    }, 1300);
 }
 
 function showAlert(message) {
@@ -169,7 +167,7 @@ function showAlert(message) {
 
     setTimeout(() => {
         alertBox.classList.remove("show");
-    }, 1500); 
+    }, 1000); 
 }
 
 function loadNextQuestion() {
