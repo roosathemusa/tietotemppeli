@@ -64,7 +64,7 @@ body {
 
 #instructions {
     width: 60%;
-    height: 40%;
+    height: 50%;
 }
 
 .custom-nappi {
@@ -143,9 +143,9 @@ body {
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 768px) {
     .custom-txs {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 }
   
@@ -194,5 +194,8 @@ body {
         z-index: 1200;
         background-color: #184236;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    #caracther {
+        width: 50px;
     }
 }
