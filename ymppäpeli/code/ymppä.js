@@ -1,12 +1,12 @@
 const startBtn = document.getElementById("start-button");
 const startView = document.getElementById("instructions");
-const gameView = document.getElementById("game-view")
-
-startBtn.addEventListener("click", function (e){
-    e.preventDefault(); //Estää linkin oletustoiminnon
-    startView.classList.add("d-none"); //d-none piilottaa elementin
-    gameView.classList.remove("d-none");
-});
+const gameView = document.getElementById("game-view");
+const finalView = document.getElementById("final");
+const factBox = document.getElementById("fact-box");
+const factText = document.getElementById("fact-txt");
+const nextButton = document.getElementById("next-button");
+const againBtn = document.getElementById("again-button");
+const scoreTxt = document.getElementById("score");
 
 //Lista eläinten tiedoista
 const animals = [
@@ -26,6 +26,18 @@ const animals = [
 let currentIndex = 0;
 let currentAnimal = animals[currentIndex]
 let score = 0;
+
+startBtn.addEventListener("click", function (e){
+    e.preventDefault(); //Estää linkin oletustoiminnon
+    startView.classList.add("d-none"); //d-none piilottaa elementin
+    gameView.classList.remove("d-none");
+});
+againBtn.addEventListener("click", function (e){
+    e.preventDefault();
+    finalView.classList.add("d-none");
+    gameView.classList.remove("d-none");
+}); 
+
 
 function showAnimal() {
     currentAnimal = animals[currentIndex];
@@ -78,10 +90,6 @@ function checkAnswer(selected) {
 
 } 
 
-const factBox = document.getElementById("fact-box");
-const factText = document.getElementById("fact-txt");
-const nextButton = document.getElementById("next-button");
-
 function showFact() {
     factBox.classList.remove("d-none");
     factText.textContent = currentAnimal.fact;
@@ -98,26 +106,14 @@ document.getElementById("next-button").addEventListener("click", function (event
     if (currentIndex < animals.length) {
       showAnimal(); 
     } else {
-      endGame(); 
+        endGame();
     }
 });
 
 function endGame() {
-    
-}
-
-//pisteet adan versio
-function showScore() {
-    resetState();
-    questionElement.innerHTML = `Sait ${score} pistettä`;
-
-    sessionStorage.setItem('ymppä', score);
-
-    nextButton.innerHTML = "Aloita alusta";
-    nextButton.style.display = "block";
-    
-    nextButton.onclick = () => {
-        startQuiz();
-        nextButton.onclick = null;
-    };
+    console.log("Endgame triggered"); // Näet konsolissa
+    gameView.classList.add("d-none");
+    finalView.classList.remove("d-none");
+    finalView.style.display = "block";  // Pakotetaan näkymään
+    scoreTxt.textContent = `Sait ${score} pistettä`;
 }

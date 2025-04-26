@@ -19,6 +19,10 @@
     opacity: 0.5;
 }
 
+#final {
+    z-index: 9999;
+}
+
 @media (max-width: 576px) {
     .game-img {
         width: 70%;
