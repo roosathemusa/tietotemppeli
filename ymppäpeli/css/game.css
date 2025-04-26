@@ -8,3 +8,20 @@
 .game-img {
     border-radius: 25px;
 }
+#result-box {
+    width: 30%;
+    height: 30%;
+}
+.correct {
+    border: 5px solid limegreen;
+}
+.incorrect {
+    opacity: 0.5;
+}
+
+@media (max-width: 576px) {
+    .game-img {
+        width: 70%;
+        padding-bottom: 5px;
+    }
+}

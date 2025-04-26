@@ -51,11 +51,12 @@
                 Onnea matkaan seikkailija!
             </p>
             <a id="start-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi">ALOITA</a>
+            <img class="img-fluid" id="caracther" src="./images/mustakettu.png">
         </div>
     </div>
 
     <!-- Pelinäkymä -->
-    <div id="game-view" class="justify-content-center d-none mb-5 mx-sm-5 mx-md-5 p-md-3 mx-xl-5 p-xl-5">
+    <div id="game-view" class="justify-content-center d-none mb-5 pb-md-5 mx-sm-5 mx-md-5 p-md-3 mx-xl-5 p-xl-5">
         <!-- Eläin nimi ja kuva -->
         <h2 id="animal-name" class="mb-1">Isopanda</h2>
         <div class="col-sm-4 col-md-4 col-lg-3">
@@ -76,21 +77,32 @@
         </div>
 
         <!-- Tulos-näkymä -->
-        <div id="result-box" class="d-none custom-center-box position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-50">
+        <div id="result-box" class="d-none custom-center-box position-absolute top-50 start-50 translate-middle p-4 rounded text-center">
             <h1 id="result-txt" class="custom-fxs m-auto pb-2"></h1>
+            <img class="img-fluid" id="caracther" src="./images/mustakettu.png">
         </div>
 
         <!-- Fact-näkymä -->
-        <div id="fact-box" class="custom-center-box d-none position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-50">
+        <div id="fact-box" class="custom-center-box d-none position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-60">
             <h1 class="custom-fxs m-auto pb-2">Tiestikö muuten, että</h1>
             <div class="text-center">
                 <p class="custom-txs" id="fact-txt"></p>
                 <a id="next-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi" disabled>SEURAAVA</a>
+                <img class="img-fluid" id="caracther" src="./images/mustakettu.png">
+            </div>
+        </div>
+
+        <!-- end -->
+        <div id="end" class="custom-center-box position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-50">
+            <h1 class="custom-fxs m-auto pb-2">ELÄINPELI</h1>
+            <div class="text-center">
+                <h1 class="score"></h1>
+                <a id="start-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi">ALUSTA</a>
+                <img class="img-fluid" id="caracther" src="./images/mustakettu.png">
             </div>
         </div>
 
     </div>
-    <img class="img-fluid m-4" id="caracther" src="./images/mustakettu.png">
     </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="./code/ymppä.js"></script>

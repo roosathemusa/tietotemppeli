@@ -54,12 +54,17 @@ body {
 #caracther {
     position: absolute;
     bottom: 1em;
-    left: 1em;
+    right: 1em;
 }
 
 .custom-center-box {
     background-color: #fae8c3dc;
     color: #091915;
+}
+
+#instructions {
+    width: 60%;
+    height: 40%;
 }
 
 .custom-nappi {
@@ -84,7 +89,6 @@ body {
 .custom-nappi:active {
     transform: translateY(4px);
 }
-
 
 @media (max-width: 576px){
     header {
@@ -111,15 +115,21 @@ body {
         height: 50vh;
     }
     #caracther {
-        bottom: 1em;
-        left: 1em;
-        width: 120px;
-        max-width: none;
+        margin: 0;
+        padding: 0;
+        width: 80px;
+        height: auto;
     }
 
     .custom-center-box {
         transform: translateY(50%) translateX(-50%);
     }
+
+    #instructions {
+        width: 70%;
+        height: 60%;
+    }
+
     .custom-fxs {
         font-size: 1.2rem;
     }
