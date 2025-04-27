@@ -165,7 +165,7 @@ button, .button-answer {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
-  }
+}
 
 
 @media (max-width: 576px) {
