@@ -14,7 +14,6 @@ header p {
 
 body {
   font-family: 'Irish Grover', regular !important;
-  color: #091915;
   overflow-y: hidden;
 }
 
@@ -54,6 +53,7 @@ body {
 body, html {
   margin: 0;
   padding: 0;
+  color: #3a2e1d;
   height: 100%;
   width: 100%;
 }
@@ -79,11 +79,11 @@ body, html {
 }
 
 .image-side img {
-  width: 25vw; 
+  width: 10vw; 
   height: auto;
   border-radius: 8px;
-  margin-left: 3vw;
-  margin-top: 31vw;
+  margin-left: 10vw;
+  margin-top: 34vw;
 }
 
 .text-side {
@@ -93,7 +93,7 @@ body, html {
   overflow-wrap: break-word; 
 }
 
-/* PELIN OHJEET */
+
 #game-instructions {
   font-size: 1.4rem;
   max-width: 1000px;
@@ -105,7 +105,7 @@ body, html {
   white-space: nowrap;
 }
 
-/* PELIALUE */
+
 #game {
   font-family: 'Segoe UI', 'Arial', sans-serif;
   background-image: url('../img/background4.png');
@@ -119,7 +119,7 @@ body, html {
   min-height: 100dvh;
 }
 
-/* PYRAMIDI JA RIVIT */
+
 #game #pyramid {
   margin-top: 5vh;
   max-width: 100%;
@@ -135,7 +135,7 @@ body, html {
   margin-bottom: 0.5vw;
 }
 
-/* SANANAPPULAT */
+
 #game .word {
   font-size: 1rem;
   font-weight: 600;
@@ -160,7 +160,6 @@ body, html {
   box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
 }
 
-/* ERIKOISTILAT */
 #game .word.selected {
   outline: 3px dashed #008080;
   background: linear-gradient(to top left, #e0f7d1, #a8ddb5);
@@ -172,7 +171,7 @@ body, html {
 }
 
 #game .word.correct {
-  background: #c3aa63;
+  background: linear-gradient(to top left, #f2d7a0, #e0b96c);
   color: #1c1405;
 }
 
@@ -182,7 +181,7 @@ body, html {
 }
 
 #game .word.merged {
-  background: linear-gradient(to bottom, #d4af37, #a67c00);
+  background: linear-gradient(to top left, #f2d7a0, #e0b96c);
   font-weight: bold;
   color: white;
   font-size: 1.1rem;
@@ -192,7 +191,6 @@ body, html {
   border-radius: 10px;
 }
 
-/* YHDISTETYT SANAT */
 #game .merged-words {
   display: flex;
   flex-wrap: nowrap;
@@ -204,14 +202,13 @@ body, html {
   white-space: nowrap;
 }
 
-/* PYRAMIDIN RIVIEN LAAJUUDET */
+
 #game #row-1 { flex: 1 1 20%; }
 #game #row-2 { flex: 1 1 40%; }
 #game #row-3 { flex: 1 1 60%; }
 #game #row-4 { flex: 1 1 80%; }
 #game #row-5 { flex: 1 1 100%; }
 
-/* NAPIT YHTEISELLÄ LUOKALLA */
 .game-button {
   margin: 5px;
   margin-top: 1rem;
@@ -224,6 +221,7 @@ body, html {
   cursor: pointer;
   transition: 0.2s;
   box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+  text-transform: uppercase;
 }
 
 .game-button:hover {
@@ -231,7 +229,6 @@ body, html {
   transform: scale(1.05);
 }
 
-/* VIESTIT */
 #game #message {
   margin-top: 18px;
   font-size: 1.2rem;
@@ -239,7 +236,76 @@ body, html {
   color: #5b3c11;
   font-family: 'Segoe UI', 'Arial', sans-serif;
 }
+#game-over-message {
+  display: none;  /* Piilossa oletuksena */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(224, 185, 108, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: #5b3c11;
+  padding: 20px 40px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 1000;
+  opacity: 0;
+  animation: bounceIn 1s forwards; 
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 1.2rem;
+}
 
+#game-over-message p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.game-over-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;  /* Vaaleankeltainen väri */
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  background-color: #7f4f2a;  /* Ruskea tausta */
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.game-over-link:hover {
+  background-color: #a66e40;  /* Vaaleampi ruskea hover-tilassa */
+}
+
+#close-message {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #091915;
+  cursor: pointer;
+}
+
+#close-message:hover {
+  color: #ff0000; /* Punainen väri, kun kursori menee päälle */
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translate(-50%, -60%);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
 
 @media (max-width: 768px) {
 

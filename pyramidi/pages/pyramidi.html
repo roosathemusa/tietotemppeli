@@ -22,13 +22,13 @@
                     <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>MATIKKA</span></a>
                 </div>
                 <div class="col-4 col-md-2 p-2">
-                    <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>PYRAMIDI</span></a>
+                    <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>ÄIKKÄ</span></a>
                 </div>
                 <div class="col-4 col-md-2 p-2">
-                    <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>TIETOVISA</span></a>
+                    <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>HISSA</span></a>
                 </div>
                 <div class="col-4 col-md-2 p-2">
-                    <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>ELÄIMET</span></a>
+                    <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>YMPPÄ</span></a>
                 </div>
                 <div class="col-4 col-md-2 p-2">
                     <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>PISTEET</span></a>
@@ -41,14 +41,14 @@
     </header>
     <main id="game">
       <section class="text-center mb-4">
-        <h1 id="game-title">Pöllön pyramidi</h1>
+        <h1 id="game-title">Sanat sekaisin</h1>
         <div class="instructions-container">
           <div class="image-side">
-            <img src="../img/pollo.png" alt="maskotti" class="img-fluid d-none d-md-block">
+            <img src="../img/mustakoira.png" alt="maskotti" class="img-fluid d-none d-md-block">
           </div>
           <div class="text-side">
             <p id="game-instructions">
-              Etsi pyramidista sanat, jotka kuuluvat yhteen.<br>
+              Etsi pyramidista sanat, joilla on jotakin yhteistä.<br>
               Voit tarkistaa vastauksesi painamlla nappia.<br>
               Saatko ratkaistua koko pyramidin?
             </p>
@@ -58,29 +58,29 @@
     <div id="game-container">
       <div id="pyramid">
         <div class="row" id="row-5">
-          <div class="word" data-category="vuodenaika">Kesä</div>
+          <div class="word" data-category="numeraalit">Yksi</div>
         </div>
         <div class="row" id="row-4">
-          <div class="word" data-category="urheilu">Jalkapallo</div>
-          <div class="word" data-category="urheilu">Koripallo</div>
+          <div class="word" data-category="substantiivit">Pallo</div>
+          <div class="word" data-category="substantiivit">Hihna</div>
         </div>
         <div class="row" id="row-3">
-          <div class="word" data-category="juhlat">Ilmapallo</div>
-          <div class="word" data-category="juhlat">Kakku</div>
-          <div class="word" data-category="juhlat">Lahja</div>
+          <div class="word" data-category="pronominit">Minä</div>
+          <div class="word" data-category="pronominit">Sinä</div>
+          <div class="word" data-category="pronominit">Te</div>
         </div>
         <div class="row" id="row-2">
-          <div class="word" data-category="hedelmät">Vesimeloni</div>
-          <div class="word" data-category="hedelmät">Banaani</div>
-          <div class="word" data-category="hedelmät">Appelsiini</div>
-          <div class="word" data-category="hedelmät">Ananas</div>
+          <div class="word" data-category="adjektiivit">Nopea</div>
+          <div class="word" data-category="adjektiivit">Iloinen</div>
+          <div class="word" data-category="adjektiivit">Pehmeä</div>
+          <div class="word" data-category="adjektiivit">Utelias</div>
         </div>
         <div class="row" id="row-1">
-          <div class="word" data-category="eläimet">Leijona</div>
-          <div class="word" data-category="eläimet">Tiikeri</div>
-          <div class="word" data-category="eläimet">Pingviini</div>
-          <div class="word" data-category="eläimet">Norsu</div>
-          <div class="word" data-category="eläimet">Pöllö</div>
+          <div class="word" data-category="verbit">Juosta</div>
+          <div class="word" data-category="verbit">Haukkua</div>
+          <div class="word" data-category="verbit">Haistaa</div>
+          <div class="word" data-category="verbit">Leikkiä</div>
+          <div class="word" data-category="verbit">Hypätä</div>
         </div>
       </div>
       <div id="check-button-container">
@@ -88,7 +88,12 @@
         
       </div>
       <div id="message"></div>
-      <button id="go" class="game-button" onclick="location.href='piste.html'">KOKONAISPISTEET</button>
+      <div id="game-over-message" class="game-over">
+        <p>Onnittelut! Ratkaisit pyramidin!</p>
+        <a href="pistesivu.html" class="game-over-link">NÄYTÄ PISTEET</a>
+        <button id="close-message" class="close-btn">×</button>  
+        </div>
+      </div>
     </div>
       <script src="../js/peli.js"></script>
     </main>

@@ -38,32 +38,47 @@ let selectedWords = [];
 let score = 0;
 
 const yhdistetytSanat = {
-  eläimet: new Set(),
-  hedelmät: new Set(),
-  juhlat: new Set(),
-  urheilu: new Set(),
-  vuodenaika: new Set()
+  verbit: new Set(),
+  adjektiivit: new Set(),
+  pronominit: new Set(),
+  substantiivit: new Set(),
+  numeraalit: new Set()
 };
 
 const oikeatMäärät = {
-  eläimet: 5,
-  hedelmät: 4,
-  juhlat: 3,
-  urheilu: 2,
-  vuodenaika: 1
+  verbit: 5,
+  adjektiivit: 4,
+  pronominit: 3,
+  substantiivit: 2,
+  numeraalit: 1
 };
 
 const kategoriaRivit = {
-  vuodenaika: 'row-5',
-  urheilu: 'row-4',
-  juhlat: 'row-3',
-  hedelmät: 'row-2',
-  eläimet: 'row-1'
+  numeraalit: 'row-5',
+  substantiivit: 'row-4',
+  pronominit: 'row-3',
+  adjektiivit: 'row-2',
+  verbit: 'row-1'
 };
 
 const scoreDisplay = document.getElementById('score');
 const checkButton = document.getElementById('check-button');
 const message = document.getElementById('message');
+
+// Pelin päättymisilmoitus
+function showGameOverMessage() {
+  const gameOverMessage = document.getElementById("game-over-message");
+  gameOverMessage.style.display = "block";  // Näytetään ilmoitus
+  setTimeout(() => {
+    gameOverMessage.style.opacity = 1;  // Animaatio alkaa
+  }, 100);
+}
+
+// Sulje peli päättymisilmoitus
+document.getElementById('close-message').addEventListener('click', function() {
+  const gameOverMessage = document.getElementById('game-over-message');
+  gameOverMessage.style.display = 'none';  // Piilotetaan ilmoitus
+});
 
 function handleClick(e) {
   const word = e.target;
@@ -101,7 +116,7 @@ function checkSelectedWords() {
   });
 
   if (yhdistetytSanat[firstCategory].size === oikeatMäärät[firstCategory]) {
-    message.textContent = `🎉 Kategoria ${firstCategory} on ratkaistu oikein!`;
+    message.textContent = `🎉 Sanaluokka ${firstCategory} on oikein!`;
     score += 2;
     scoreDisplay.textContent = `Pisteet: ${score} / 10`;
     sessionStorage.setItem('pisteet', score);
@@ -122,7 +137,7 @@ function checkSelectedWords() {
 
     updateRemainingWordsLayout();
   } else {
-    message.textContent = `✅ Oikea kategoria! Jatka yhdistämistä.`;
+    message.textContent = `✅ Olet oikeilla jäljillä! Jatka yhdistämistä.`;
   }
 
   const kaikkiValmiit = Object.keys(oikeatMäärät).every(kategoria =>
@@ -130,9 +145,11 @@ function checkSelectedWords() {
   );
 
   if (kaikkiValmiit) {
-    message.textContent = '🏆 Ratkaisit pyramidin!';
-    checkButton.disabled = true;
+    message.textContent = '';  
+    checkButton.disabled = true;  
+    showGameOverMessage();  
   }
+  
 
   selectedWords = [];
 }
