@@ -1,0 +1,304 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    font-family: 'Irish Grover', regular !important;
+    color: #091915;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #184236;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+header p {
+    color: #FCF3AE;
+}
+
+.navbar-toggler {
+    background-color: #FCF3AE !important;
+}
+
+.nav-link {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url('../images/nappi.png') !important; /* This image was created with AI via pollo.ai */
+    background-size: contain !important;   
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 100px;
+    height: 60px;
+    width: 100%;
+    max-width: 200px; 
+    box-sizing: border-box;
+}
+
+.nav-link:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+}
+
+.nav-link:active {
+    transform: translateY(4px);
+}
+
+.nav-link span {
+    z-index: 1;
+    font-size: 1rem;
+}
+
+.bg-image {
+    background-image: url('../images/tausta.jpg'); /* This image was created with AI via pollo.ai */
+    background-size: cover;
+    background-position: bottom left;
+    position: absolute; 
+    min-height: 100vh;
+    height: auto;  
+    width: 100%;
+    flex-direction: column;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.question-box {
+    background-color: #fef8cb;
+    width: 70vw;
+    max-width: 1000px;
+    min-height: 200px;
+    margin-top: 100px !important;
+    margin-bottom: 10px;
+    padding: 30px;
+    position: relative;  
+    z-index: 1;
+    overflow: hidden;
+    text-align: start;
+}
+
+.answer-input {
+    width: 125px !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.button-answer {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url('../images/nappi.png') !important; /* This image was created with AI via pollo.ai */
+    background-size: contain !important;   
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 60px;
+    max-width: 200px; 
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.button-answer:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+}
+
+.button-answer:active {
+    transform: translateY(4px);
+}
+
+.kissa-image {
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    width: 150px;
+    height: auto;
+    z-index: 0;
+}
+
+.alert-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #184236;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    color: #FCF3AE;
+    padding: 30px 30px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10000;
+    pointer-events: none;
+    text-align: center;
+}
+
+.alert-box.show {
+    opacity: 1;
+}
+
+button, .button-answer {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+@media (max-width: 576px) {
+    html, body {
+        overflow-y: auto;
+    }
+    .bg-image{
+        height: auto;
+    }
+    #questionText {
+        font-size: 1rem;
+    }
+    #optionsContainer {
+        font-size: 1rem;
+    }
+    .question-box {
+        width: 80vw !important;
+        margin-top: 80px !important;
+    }
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .kissa-image {
+        width: 100px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    html, body {
+        overflow-y: auto;
+    }
+    #questionText {
+        font-size: 1.1rem;
+    }
+    #optionsContainer {
+        font-size: 1.1rem;
+    }
+    .kissa-image {
+        width: 120px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
+    .question-box {
+        width: 80vw !important;
+        margin-top: 90px !important;
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html, body {
+        overflow-y: auto;
+    }
+    #questionText {
+        font-size: 1.2rem;
+    }
+    #optionsContainer {
+        font-size: 1.2rem;
+    }
+    .kissa-image {
+        width: 135px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
+}
+@media (min-width: 992px) {
+    .nav-link span {
+        font-size: 0.75rem;
+    }
+    #questionText {
+        font-size: 1.3rem;
+    }
+    #optionsContainer {
+        font-size: 1.3rem;
+    }
+    .question-box {
+        width: 80vw !important;
+        margin-top: 120px !important;
+    }
+}
+@media (max-height: 500px) {
+    html, body {
+        overflow-y: auto;
+    }
+    #startContainer {
+        margin-top: 100px !important;
+        min-width: 85vw !important;
+        padding: 20px !important;
+        min-height: 30px;
+    }
+    #startContainer h1 {
+        font-size: 1.3rem !important;
+    }
+    #startContainer p {
+        font-size: 1.1rem !important;
+    }
+    #questionText {
+        font-size: 1rem !important;
+    }
+    #optionsContainer {
+        font-size: 1rem !important;
+    }
+    .question-box {
+        margin-top: 40px !important;
+        min-width: 85vw !important;
+        min-height: auto;
+    }
+    .kissa-image {
+        width: 120px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+}
