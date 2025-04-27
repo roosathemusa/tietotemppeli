@@ -100,13 +100,56 @@ h2 {
     line-height: 1.5;
 }
 
+h3 {
+    color: #34495e;
+    font-family: 'Irish Grover';
+    font-size: 35px;
+    line-height: 1.5;
+}
+    
+
 p {
     color: #34495e;
-    font-family: 'Irish Grover', cursive;
-    font-size: 20px;
+    font-family: 'Irish Grover';
+    font-size: 23px;
     margin-bottom: 20px;
     line-height: 1.5;
 }
+
+h4 {
+    color: #34495e;
+    font-family: 'Irish Grover';
+    font-size: 40px;
+    line-height: 1.5;
+    text-align: center;
+}
+.lahteet {
+    color: #34495e;
+    font-family: 'Irish Grover';
+    font-size: 23px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.alatunniste {
+    border-top: 2px solid #34495e; 
+    padding-bottom: 10px; 
+    margin-top: 30px;
+  }
+
+  .teksti    {
+  color: #34495e;
+  font-family: 'Irish Grover';
+  font-size: 23px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
 
 .grid-row {
     display: grid;
