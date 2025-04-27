@@ -119,7 +119,7 @@ function checkSelectedWords() {
     message.textContent = `🎉 Sanaluokka ${firstCategory} on oikein!`;
     score += 2;
     scoreDisplay.textContent = `Pisteet: ${score} / 10`;
-    sessionStorage.setItem('pisteet', score);
+    sessionStorage.setItem('peli4', score);
 
     const targetRowId = kategoriaRivit[firstCategory];
     const targetRow = document.getElementById(targetRowId);
