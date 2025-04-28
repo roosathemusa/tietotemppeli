@@ -7,13 +7,6 @@ html, body {
     overflow-y: auto;
 }
 
-body {
-    font-family: 'Irish Grover', regular !important;
-    color: #091915;
-    padding: 0;
-    margin: 0;
-}
-
 header {
     background-color: #184236;
     position: fixed;
@@ -24,8 +17,18 @@ header {
     padding: 20px 0;
 }
 
-header p {
+header .navbar-brand {
     color: #FCF3AE;
+}
+
+header .navbar-brand:hover {
+    color: #FCF3AE;
+    transform: translateY(2px);
+}
+
+body {
+    font-family: 'Irish Grover', regular !important;
+    color: #091915;
 }
 
 .navbar-toggler {
@@ -39,8 +42,8 @@ header p {
     background-size: contain !important;   
     background-repeat: no-repeat !important;
     background-position: center !important;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
     margin-right: 100px;
     height: 60px;
     width: 100%;
@@ -244,9 +247,6 @@ button, .button-answer {
     }
 }
 @media (min-width: 992px) {
-    .nav-link span {
-        font-size: 0.75rem;
-    }
     #questionText {
         font-size: 1.3rem;
     }
