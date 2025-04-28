@@ -43,19 +43,22 @@
       <section class="text-center mb-4">
         <h1 id="game-title">Sanat sekaisin</h1>
         <div class="instructions-container">
-          <div class="image-side">
-            <img src="../img/mustakoira.png" alt="maskotti" class="img-fluid d-none d-md-block">
-          </div>
           <div class="text-side">
             <p id="game-instructions">
-              Etsi pyramidista sanat, joilla on jotakin yhteistä.<br>
-              Voit tarkistaa vastauksesi painamlla nappia.<br>
+              Etsi pyramidista sanat, jotka kuuluvat samaan sanaluokkaan.
+              Alas tulee viisi sanaa ja huipulle vain yksi.
+              Voit tarkistaa vastauksesi painamalla nappia.<br>
               Saatko ratkaistua koko pyramidin?
             </p>
           </div>
         </div>
       </section>
-    <div id="game-container">
+<div id="game-container" class="d-flex">
+  <div class="image-side">
+  <img src="../img/ruskeakoira.png" alt="maskotti" class="img-fluid d-none d-md-block">
+  </div>
+  <div class="pyramid-wrapper">
+  
       <div id="pyramid">
         <div class="row" id="row-5">
           <div class="word" data-category="numeraalit">Yksi</div>
@@ -67,7 +70,7 @@
         <div class="row" id="row-3">
           <div class="word" data-category="pronominit">Minä</div>
           <div class="word" data-category="pronominit">Sinä</div>
-          <div class="word" data-category="pronominit">Te</div>
+          <div class="word" data-category="pronominit">Hän</div>
         </div>
         <div class="row" id="row-2">
           <div class="word" data-category="adjektiivit">Nopea</div>
@@ -84,7 +87,8 @@
         </div>
       </div>
       <div id="check-button-container">
-        <button id="check-button" class="game-button">TARKISTA</button><button id="score" class="game-button">PISTEET: 0 / 10</button>
+        <button id="check-button" class="game-button">TARKISTA</button>
+        <button id="score" class="game-button">PISTEET: 0 / 10</button>
         
       </div>
       <div id="message"></div>

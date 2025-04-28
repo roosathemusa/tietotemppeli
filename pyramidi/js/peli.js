@@ -69,6 +69,13 @@ const message = document.getElementById('message');
 
 // Pelin päättymisilmoitus
 function showGameOverMessage() {
+
+    // Tallennetaan pisteet ennen popupin näyttämistä
+    sessionStorage.setItem('peli4', score);
+    console.log('Peli4 pisteet tallennettu:', sessionStorage.getItem('peli4'));
+
+    // Varmistetaan, että pisteet on tallennettu ennen popupin avaamista
+    console.log('Pisteet tallennettu:', sessionStorage.getItem('peli4'));
   const gameOverMessage = document.getElementById("game-over-message");
   gameOverMessage.style.display = "block";  
   setTimeout(() => {
@@ -119,6 +126,7 @@ function checkSelectedWords() {
       selectedWords = [];
     }, 1000);
     return;
+
   }
 
   // Lisää sanat yhdistettyihin
@@ -133,6 +141,7 @@ function checkSelectedWords() {
     score += 2;
     scoreDisplay.textContent = `Pisteet: ${score} / 10`;
     sessionStorage.setItem('peli4', score);
+
 
     const targetRowId = kategoriaRivit[firstCategory];
     const targetRow = document.getElementById(targetRowId);

@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-
-
 header {
   background-color: #184236;
 }
@@ -19,7 +17,7 @@ header .navbar-brand:hover {
 
 body {
   font-family: 'Irish Grover', regular !important;
-  
+  height: 100%;
 }
 
 .navbar-toggler {
@@ -55,80 +53,92 @@ body {
   z-index: 1;
   font-size: 1rem;
 }
+
+
 body, html {
+  background-image: url('../img/background4.png');
+  background-size: cover;  /* Skaalautuu aina näytön mukaan */
+  background-position: center;  /* Taustakuva keskitetään */
+  background-repeat: no-repeat;  /* Ei toisteta taustakuvaa */
+  min-height: auto;  /* Varmistaa, että taustakuva kattaa koko näyttöalueen */
   margin: 0;
   padding: 0;
   color: #3a2e1d;
   height: 100%;
-  width: 100%;
 }
+
 #game-title {
   font-family: 'Irish Grover', cursive;
   font-size: 3rem;
   color: #3a2e1d;
   margin-bottom: 10px;
-  margin-top: 10px;
+  padding-top: 30px;
 }
 .instructions-container {
   position: relative;      
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;       
 
 }
 
+#game-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: flex-start;
+  min-height: 600px;
+}
+
 .image-side {
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);  /
+  left: 15%;
+  top: 100px;
+  transform: translateY(0);
 }
 
 .image-side img {
-  width: 10vw; 
+  width: 10vw;
   height: auto;
   border-radius: 8px;
-  margin-left: 10vw;
-  margin-top: 34vw;
+  display: block;
+}
+.pyramid-wrapper {
+  flex-grow: 1;
+
 }
 
-.text-side {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;    
-  overflow-wrap: break-word; 
+#pyramid {
+  margin: auto; /* Keskitetään pyramidin kontti */
+  flex: 1;
 }
-
 
 #game-instructions {
   font-size: 1.4rem;
-  max-width: 1000px;
-  margin: 0 auto 50px auto;
   color: #5b3c11;
   line-height: 1.6;
   font-family: 'Irish Grover';
   text-align: center;
-  white-space: nowrap;
+  max-width: 800px; /* Rajoittaa tekstin leveyttä */
+  margin: 0 auto; /* Keskittää sisällön */
+  word-wrap: break-word; /* Varmistaa, että sanat eivät mene yli oikean reunan */
+  word-break: break-word; /* Katkaisee pitkät sanat tarvittaessa */
+  padding-top: 1rem;
 }
 
 
 #game {
   font-family: 'Segoe UI', 'Arial', sans-serif;
-  background-image: url('../img/background4.png');
-  background-size: cover;
-  background-position: center;
-  padding: 2vw;
   text-align: center;
   color: #3a2e1d;
   font-size: 16px;
   line-height: 1.6;
-  min-height: 100dvh;
+  
 }
 
-
 #game #pyramid {
-  margin-top: 5vh;
   max-width: 100%;
-  margin: 5vh auto;
+  margin: 3vh auto;
+
 }
 
 #game .row {
@@ -215,7 +225,7 @@ body, html {
 #game #row-5 { flex: 1 1 100%; }
 
 .game-button {
-  margin: 5px;
+  margin-right: 1rem;
   margin-top: 1rem;
   font-size: 1.2rem;
   padding: 12px 22px;
@@ -228,7 +238,18 @@ body, html {
   box-shadow: 0 4px 6px rgba(0,0,0,0.25);
   text-transform: uppercase;
 }
-
+.button2 {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: 12px 22px;
+  background-color: #8b5e3c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+  text-transform: uppercase;
+}
 .game-button:hover {
   background-color: #a66e40;
   transform: scale(1.05);
@@ -243,7 +264,7 @@ body, html {
 }
 
 #game-over-message {
-  display: none;  /* Piilossa oletuksena */
+  display: none; 
   position: fixed;
   top: 50%;
   left: 50%;
@@ -271,11 +292,11 @@ body, html {
 .game-over-link {
   display: inline-block;
   margin-top: 10px;
-  color: white;  /* Vaaleankeltainen väri */
+  color: white; 
   text-decoration: none;
   font-size: 1.2rem;
   padding: 8px 16px;
-  background-color: #7f4f2a;  /* Ruskea tausta */
+  background-color: #7f4f2a;  
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
@@ -312,8 +333,12 @@ body, html {
     transform: translate(-50%, -50%);
   }
 }
-
 @media (max-width: 768px) {
+
+  body {
+    background-image: none;
+    background-color: #f4edd3;
+  }
 
   #game-instructions {
     font-size: 1.2rem;
@@ -336,11 +361,52 @@ body, html {
     background-image: none;
     background-color: #f4edd3;
   }
+
   .image-side {
     display: none;
+  }
+}
+@media (max-width: 1340px) and (orientation: landscape) {
+  body {
+    background-image: none;
+    background-color: #f4edd3;
+  }
+
+  #game-instructions {
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+
+  #game .word {
+    font-size: 0.95rem;
+    padding: 12px 16px;
+  }
+
+  .game-button {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+
+  #game {
+    font-size: 14px;
+    padding: 4vw;
+    background-image: none;
+    background-color: #f4edd3;
+  }
+
+  .image-side {
+    display: none;
+  }
+
 }
 
+
 @media (max-width: 480px) {
+
+  body {
+    background-image: none;
+    background-color: #f4edd3;
+  }
 
   #game-instructions {
     font-size: 0.9rem;
@@ -385,7 +451,7 @@ body, html {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 }
-}
+
 
 @media (min-width: 768px) {
   .custom-center-box {

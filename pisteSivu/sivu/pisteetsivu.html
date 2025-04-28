@@ -84,7 +84,7 @@
       </div>
       <div class="col-md-3">
         <div class="tietobox wordgame">
-          <h3>Sanapeli</h3>
+          <h3>Äidinkieli</h3>
         </div>
       </div>
     </div>
@@ -122,13 +122,13 @@
     
     const matikka = sessionStorage.getItem('matikka') ?? 0;
     const historia = sessionStorage.getItem('hissa') ?? 0;
-    const luonnontiede = sessionStorage.getItem('ympäristöoppi') ?? 0;
+    const luonnontiede = sessionStorage.getItem('peli3') ?? 0;
     const sanapeli = sessionStorage.getItem('peli4') ?? 0;
 
     
     document.getElementById('score-matikka').textContent = `${matikka}/10`;
     document.getElementById('score-historia').textContent = `${historia}/10`;
-    document.getElementById('score-ympäristöoppi').textContent = `${ympäristöoppi}/10`;
+    document.getElementById('score-ympäristöoppi').textContent = `${luonnontiede}/10`;
     document.getElementById('score-sanapeli').textContent = `${sanapeli}/10`;
   </script>
 </body>
