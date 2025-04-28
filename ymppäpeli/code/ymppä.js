@@ -34,8 +34,7 @@ startBtn.addEventListener("click", function (e){
 });
 againBtn.addEventListener("click", function (e){
     e.preventDefault();
-    finalView.classList.add("d-none");
-    gameView.classList.remove("d-none");
+    restartGame();
 }); 
 
 
@@ -115,9 +114,16 @@ document.getElementById("next-button").addEventListener("click", function (event
 });
 
 function endGame() {
-    console.log("Endgame triggered"); // Näet konsolissa
     gameView.classList.add("d-none");
     finalView.classList.remove("d-none");
     finalView.style.display = "block";  // Pakotetaan näkymään
-    scoreTxt.textContent = `Sait ${score} pistettä`;
+    scoreTxt.textContent = `Sait ${score} / ${animals.length} pistettä`;
+}
+
+function restartGame() {
+    finalView.classList.add("d-none");
+    gameView.classList.remove("d-none");
+    currentIndex = 0;
+    score = 0;
+    showAnimal();
 }

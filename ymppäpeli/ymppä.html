@@ -6,7 +6,6 @@
     <title>ymppäpeli</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/ymppä.css">
-    <link rel="stylesheet" href="./css/game.css">
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -29,7 +28,7 @@
                     <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>HISSA</span></a>
                 </div>
                 <div class="col-4 col-md-2 col-md-lg-12 p-2">
-                    <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>YMPPÄ</span></a>
+                    <a class="nav-link btn d-flex align-items-center justify-content-center" href="./ymppä.html"><span>YMPPÄ</span></a>
                 </div>
                 <div class="col-4 col-md-2 col-md-lg-12 p-2">
                     <a class="nav-link btn d-flex align-items-center justify-content-center" href=""><span>PISTEET</span></a>
@@ -42,12 +41,12 @@
     </header>
 
     <!-- Ohjenäkymä -->
-    <div id="instructions" class="custom-center-box position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-50">
+    <div id="instructions" class="custom-center-box position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-55">
         <h1 class="custom-fxs m-auto pb-2">ELÄINPELI</h1>
         <div class="text-center">
             <p class="custom-txs">
-                Valitse mikä biomi on eläimen yleisin elinympäristö.<br>
-                Oikean vastauksen jälkeen<br>
+                Valitse mikä kuvista on eläimen yleisin elinympäristö.<br>
+                Oikean vastauksen jälkeen saat jonkin faktan eläimestä.<br>
                 Onnea matkaan seikkailija!
             </p>
             <a id="start-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi">ALOITA</a>
@@ -66,43 +65,41 @@
         <!-- Maisemavaihtoehdot -->
         <div class="row justify-content-center">
             <div class="col-10 col-sm-4 col-md-4 col-lg-3">
-                <img id="pic1" src="./images/bambumetsä.png" alt="bambumetsä" class="environment-option img-fluid game-img" data-environment="bambuforest">
+                <img id="pic1" src="./images/bambumetsä.png" alt="bambumetsä" class="environment-option img-fluid game-img" data-environment="bambumetsä">
             </div>
             <div class="col-10 col-sm-4 col-md-4 col-lg-3">
-                <img id="pic2" src="./images/savanni.png" alt="savanni" class="environment-option img-fluid game-img" data-environment="savanna">
+                <img id="pic2" src="./images/savanni.png" alt="savanni" class="environment-option img-fluid game-img" data-environment="savanni">
             </div>
             <div class="col-10 col-sm-4 col-md-4 col-lg-3">
-                <img id="pic3" src="./images/sademetsä.png" alt="sademetsä" class="environment-option img-fluid game-img" data-environment="rainforest">
+                <img id="pic3" src="./images/sademetsä.png" alt="sademetsä" class="environment-option img-fluid game-img" data-environment="sademetsä">
             </div>
         </div>
 
         <!-- Tulos-näkymä -->
         <div id="result-box" class="d-none custom-center-box position-absolute top-50 start-50 translate-middle p-4 rounded text-center">
             <h1 id="result-txt" class="custom-fxs m-auto pb-2"></h1>
-            <p id="correct-answer" class="custom-fxs"></p>
-            <img class="img-fluid" id="caracther" src="./images/mustakettu.png">
+            <p id="correct-answer" class="custom-txs"></p>
         </div>
 
         <!-- Fact-näkymä -->
         <div id="fact-box" class="custom-center-box d-none position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-60">
-            <h1 class="custom-fxs m-auto pb-2">Tiestikö muuten, että</h1>
+            <h1 class="custom-fxs m-auto pb-1">Tiesitkö muuten, että</h1>
             <div class="text-center">
                 <p class="custom-txs" id="fact-txt"></p>
                 <a id="next-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi" disabled>SEURAAVA</a>
                 <img class="img-fluid" id="caracther" src="./images/mustakettu.png">
             </div>
         </div>
+    </div>
 
-        <!-- Lopuksi -->
-        <div id="final" class="d-none custom-center-box position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-50">
-            <h1 class="custom-fxs m-auto pb-2">ELÄINPELI</h1>
-            <div class="text-center">
-                <h1 id="score"></h1>
-                <a id="again-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi">ALUSTA</a>
-                <img class="img-fluid" id="caracther" src="./images/mustakettu.png">
-            </div>
+    <!-- Lopuksi -->
+    <div id="final" class="d-none custom-center-box position-absolute top-50 start-50 translate-middle p-4 rounded text-center w-50">
+        <h1 class="custom-fxs m-auto pb-2">PELI PÄÄTTYI</h1>
+        <div class="text-center">
+            <h1 id="score"></h1>
+            <a id="again-button" href="#" class="custom-nappi btn d-flex align-items-center justify-content-center custom-nappi">ALUSTA</a>
+            <img class="img-fluid" id="caracther" src="./images/mustakettu.png">
         </div>
-
     </div>
     </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

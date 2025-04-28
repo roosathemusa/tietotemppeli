@@ -55,6 +55,9 @@ body {
     position: absolute;
     bottom: 1em;
     right: 1em;
+    width: 100px;
+    height: auto;
+    pointer-events: none;
 }
 
 .custom-center-box {
@@ -88,6 +91,28 @@ body {
 }
 .custom-nappi:active {
     transform: translateY(4px);
+}
+#fact-box{
+    .custom-txs {
+        padding: 25px;
+    }
+}
+#game-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+.game-img {
+    border-radius: 25px;
+}
+#result-box {
+    width: 30%;
+    height: 30%;
+}
+#final {
+    z-index: 9999;
 }
 
 @media (max-width: 576px){
@@ -135,17 +160,23 @@ body {
     }
     .custom-txs {
         font-size: 1rem;
+        padding: 15px;
     }
     .custom-nappi {
         font-size: 0.8rem;
         padding: 10px 20px;
         width: 80px;
     }
+    .game-img {
+        width: 70%;
+        padding-bottom: 5px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
     .custom-txs {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        padding: 10px;
     }
 }
   
