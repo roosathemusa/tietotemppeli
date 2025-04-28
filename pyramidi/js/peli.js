@@ -36,6 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 let selectedWords = [];
 let score = 0;
+let yhdistysKaynnissa = false;
+let oikeaYhdistysKategoria = '';
 
 const yhdistetytSanat = {
   verbit: new Set(),
@@ -68,20 +70,30 @@ const message = document.getElementById('message');
 // Pelin päättymisilmoitus
 function showGameOverMessage() {
   const gameOverMessage = document.getElementById("game-over-message");
-  gameOverMessage.style.display = "block";  // Näytetään ilmoitus
+  gameOverMessage.style.display = "block";  
   setTimeout(() => {
-    gameOverMessage.style.opacity = 1;  // Animaatio alkaa
+    gameOverMessage.style.opacity = 1;
   }, 100);
 }
 
-// Sulje peli päättymisilmoitus
+
 document.getElementById('close-message').addEventListener('click', function() {
   const gameOverMessage = document.getElementById('game-over-message');
-  gameOverMessage.style.display = 'none';  // Piilotetaan ilmoitus
+  gameOverMessage.style.display = 'none';
 });
+
 
 function handleClick(e) {
   const word = e.target;
+  const wordCategory = word.getAttribute('data-category');
+
+  if (yhdistysKaynnissa) {
+    if (wordCategory !== oikeaYhdistysKategoria) {
+      message.textContent = `❌ Valitsit väärän kategorian sanan! Valitse vain ${oikeaYhdistysKategoria}.`;
+      return; 
+    }
+  }
+
   word.classList.toggle('selected');
 
   if (word.classList.contains('selected')) {
@@ -91,6 +103,7 @@ function handleClick(e) {
   }
 }
 
+// Tarkista valitut sanat
 function checkSelectedWords() {
   if (selectedWords.length === 0) return;
 
@@ -136,8 +149,14 @@ function checkSelectedWords() {
     });
 
     updateRemainingWordsLayout();
+
+   
+    yhdistysKaynnissa = false;
+    oikeaYhdistysKategoria = '';
   } else {
     message.textContent = `✅ Olet oikeilla jäljillä! Jatka yhdistämistä.`;
+    yhdistysKaynnissa = true;
+    oikeaYhdistysKategoria = firstCategory;
   }
 
   const kaikkiValmiit = Object.keys(oikeatMäärät).every(kategoria =>
@@ -145,11 +164,10 @@ function checkSelectedWords() {
   );
 
   if (kaikkiValmiit) {
-    message.textContent = '';  
-    checkButton.disabled = true;  
-    showGameOverMessage();  
+    message.textContent = '';
+    checkButton.disabled = true;
+    showGameOverMessage();
   }
-  
 
   selectedWords = [];
 }

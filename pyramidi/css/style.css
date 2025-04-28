@@ -241,6 +241,7 @@ body, html {
   color: #5b3c11;
   font-family: 'Segoe UI', 'Arial', sans-serif;
 }
+
 #game-over-message {
   display: none;  /* Piilossa oletuksena */
   position: fixed;
