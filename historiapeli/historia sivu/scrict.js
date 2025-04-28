@@ -95,6 +95,8 @@ function startQuiz() {
     nextButton.innerHTML = "Seuraava";
     kuva.src = "../kuvat/neutral.png";
     showQuestion();
+
+  
 }
 
 function showQuestion() {
@@ -132,9 +134,13 @@ function selectAnswer(e) {
         selectedBtn.classList.add("correct");
         score++;
         kuva.src = "../kuvat/good.png";
+        const correctSound = document.getElementById("correct-sound");
+        correctSound.play();
     } else {
         selectedBtn.classList.add("incorrect");
-        kuva.src = "../kuvat/anger test.png";
+        kuva.src = "../kuvat/anger test1.png";
+        const correctSound = document.getElementById("wrong-sound");
+        correctSound.play();
     }
 
     Array.from(answerButtons.children).forEach(button => {
