@@ -2,6 +2,10 @@ header {
     background-color: #184236;
 }
 
+.ohje {
+    font-size: 1.5rem;
+}
+
 header p {
     color: #FCF3AE;
 }
