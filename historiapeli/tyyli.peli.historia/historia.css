@@ -44,7 +44,7 @@ header {
     font-weight: 600;
 }
 .btn{
-    background: #222 !important;
+    
     color: #ffffff !important;
     font-weight: 500;
     width: 100%;
@@ -55,6 +55,21 @@ header {
     border-radius: 4px;
     cursor: pointer;
     transition:all 0.3s;
+}
+#answer-buttons .btn {
+
+color: #ffffff !important;
+font-weight: 500;
+width: 100%;
+border: 1px solid #222;
+padding: 10px 0;
+margin:10px;
+text-align: left;
+border-radius: 4px;
+cursor: pointer;
+transition:all 0.3s;
+background-color: #091915;
+text-align:center;
 }
 .btn:hover{
     background:#222;
@@ -118,7 +133,7 @@ header {
         width: 100%;
         z-index: 1200; 
         background-color: #184236;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        
     }
     
     #background {
