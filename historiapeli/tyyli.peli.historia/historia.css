@@ -23,6 +23,8 @@ header {
 }
 header .navbar-brand {
     color: #FCF3AE;
+    font-size: 2rem;
+    
 }
 
 header .navbar-brand:hover {
