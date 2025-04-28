@@ -118,6 +118,7 @@ function endGame() {
     finalView.classList.remove("d-none");
     finalView.style.display = "block";  // Pakotetaan näkymään
     scoreTxt.textContent = `Sait ${score} / ${animals.length} pistettä`;
+    sessionStorage.setItem('ymppä', score);
 }
 
 function restartGame() {
