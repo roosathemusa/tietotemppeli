@@ -19,7 +19,15 @@ header {
     background-color: #184236; 
     color: rgb(247, 254, 201); 
     text-align: left; 
-    padding: 20px; 
+    padding: 20px 0px; 
+}
+header .navbar-brand {
+    color: #FCF3AE;
+}
+
+header .navbar-brand:hover {
+    color: #FCF3AE;
+    transform: translateY(2px);
 }
 .app {
     background: rgb(247, 254, 201);

@@ -21,6 +21,14 @@ header {
     text-align: left; 
     padding: 20px; 
 }
+header .navbar-brand {
+    color: #FCF3AE;
+}
+
+header .navbar-brand:hover {
+    color: #FCF3AE;
+    transform: translateY(2px);
+}
 .image-box {
     text-align: center; 
         margin: 20px; 

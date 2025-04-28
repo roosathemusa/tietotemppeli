@@ -2,8 +2,17 @@ header {
     background-color: #184236;
 }
 
-header p {
+.ohje {
+    font-size: 1.5rem;
+}
+
+header .navbar-brand {
     color: #FCF3AE;
+}
+
+header .navbar-brand:hover {
+    color: #FCF3AE;
+    transform: translateY(2px);
 }
 
 body {

@@ -2,10 +2,14 @@ header {
     background-color: #184236;
     overflow: visible;
 }
-header p {
+header .navbar-brand {
     color: #FCF3AE;
 }
 
+header .navbar-brand:hover {
+    color: #FCF3AE;
+    transform: translateY(2px);
+}
 body {
     font-family: 'Irish Grover', regular !important;
     color: #e4d078;

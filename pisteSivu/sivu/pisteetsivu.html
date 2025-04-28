@@ -11,7 +11,7 @@
 <body>
   <header class="navbar navbar-expand-lg p-3" style="background-color: #184236;">
     <div class="container-fluid d-flex justify-content-between align-items-center">
-      <p class="m-0 h2 text-light">TIETOTEMPPELI</p>
+      <a class="navbar-brand text-decoration-none m-0 fs-2" href="../../etusivu/index.html">TIETOTEMPPELI</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
           <a class="nav-link btn d-flex align-items-center justify-content-center" href="../../historiapeli/historiasivu/historia.html"><span>HISSA</span></a>
         </div>
         <div class="col-4 col-md-2 p-2">
-          <a class="nav-link btn d-flex align-items-center justify-content-center" href="../../"><span>YMPPÄ</span></a>
+          <a class="nav-link btn d-flex align-items-center justify-content-center" href="../../ymppäpeli/ymppä.html"><span>YMPPÄ</span></a>
         </div>
         <div class="col-4 col-md-2 p-2">
           <a class="nav-link btn d-flex align-items-center justify-content-center" href="../../pisteSivu/sivu/pisteetsivu.html"><span>PISTEET</span></a>
@@ -79,7 +79,7 @@
       </div>
       <div class="col-md-3">
         <div class="tietobox science">
-          <h3>Luonnontiede</h3>
+          <h3>Ympäristöoppi</h3>
         </div>
       </div>
       <div class="col-md-3">
@@ -102,7 +102,7 @@
       </div>
       <div class="col text-center">
         <div class="score-box3">
-          <div class="score" id="score-luonnontiede">0/10</div>
+          <div class="score" id="score-ympäristöoppi">0/10</div>
         </div>
       </div>
       <div class="col text-center">
@@ -122,13 +122,13 @@
     
     const matikka = sessionStorage.getItem('matikka') ?? 0;
     const historia = sessionStorage.getItem('hissa') ?? 0;
-    const luonnontiede = sessionStorage.getItem('peli3') ?? 0;
+    const luonnontiede = sessionStorage.getItem('ympäristöoppi') ?? 0;
     const sanapeli = sessionStorage.getItem('peli4') ?? 0;
 
     
     document.getElementById('score-matikka').textContent = `${matikka}/10`;
     document.getElementById('score-historia').textContent = `${historia}/10`;
-    document.getElementById('score-luonnontiede').textContent = `${luonnontiede}/10`;
+    document.getElementById('score-ympäristöoppi').textContent = `${ympäristöoppi}/10`;
     document.getElementById('score-sanapeli').textContent = `${sanapeli}/10`;
   </script>
 </body>
