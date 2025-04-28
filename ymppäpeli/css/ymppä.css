@@ -1,0 +1,232 @@
+header {
+    background-color: #184236;
+    overflow: visible;
+}
+header p {
+    color: #FCF3AE;
+}
+
+body {
+    font-family: 'Irish Grover', regular !important;
+    color: #e4d078;
+    background-image: url('../images/Luonnontiede.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.navbar-toggler {
+    background-color: #FCF3AE !important;
+}
+
+.nav-link {
+    font-weight: bold !important;
+    color: #091915 !important;
+    background-image: url('../images/nappi.png') !important;
+    background-size: contain !important;   
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 100px;
+    height: 60px;
+    width: 100%;
+    max-width: 200px; 
+    box-sizing: border-box;
+}
+
+.nav-link:hover {
+    background-size: cover; 
+    transform: translateY(2px);
+}
+
+.nav-link:active {
+    transform: translateY(4px);
+}
+
+.nav-link span {
+    z-index: 1;
+    font-size: 1rem;
+}
+
+#caracther {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    width: 100px;
+    height: auto;
+    pointer-events: none;
+}
+
+.custom-center-box {
+    background-color: #fae8c3dc;
+    color: #091915;
+}
+
+#instructions {
+    width: 60%;
+    height: 50%;
+}
+
+.custom-nappi {
+    background-image: url('../images/nappi.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #091915;
+    font-weight: bold;
+    padding: 10px 40px;
+    margin: auto;
+    height: 60px;
+    width: 120px;
+    border: none;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.custom-nappi:hover {
+    transform: translateY(2px);
+}
+.custom-nappi:active {
+    transform: translateY(4px);
+}
+#fact-box{
+    .custom-txs {
+        padding: 25px;
+    }
+}
+#game-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+.game-img {
+    border-radius: 25px;
+}
+#result-box {
+    width: 30%;
+    height: 30%;
+}
+#final {
+    z-index: 9999;
+}
+
+@media (max-width: 576px){
+    header {
+        padding: 1rem;
+    }
+    p.h1 {
+        font-size: 1.8rem;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    #navbarNav {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        z-index: 1200; 
+        background-color: #184236; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    #background {
+        height: 50vh;
+    }
+    #caracther {
+        margin: 0;
+        padding: 0;
+        width: 80px;
+        height: auto;
+    }
+
+    .custom-center-box {
+        transform: translateY(50%) translateX(-50%);
+    }
+
+    #instructions {
+        width: 70%;
+        height: 60%;
+    }
+
+    .custom-fxs {
+        font-size: 1.2rem;
+    }
+    .custom-txs {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    .custom-nappi {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        width: 80px;
+    }
+    .game-img {
+        width: 70%;
+        padding-bottom: 5px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .custom-txs {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
+  
+
+@media (min-width: 768px) {
+    .custom-center-box {
+        transform: translateY(40%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .custom-center-box {
+        transform: translateY(30%) translateX(-50%);
+    }
+
+    .custom-txs {
+        font-size: 2rem;
+    }
+}
+
+@media (max-height: 500px) {
+    .custom-center-box {
+        padding: 10px !important;
+    }
+    .custom-fxs {
+        font-size: 0.9rem;
+    }
+    .custom-txs {
+        font-size: 0.8rem;
+    }
+    .custom-nappi {
+        height: 40px;
+        width: 100px;
+        font-size: 0.8rem;
+    }
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+        background-color: #184236;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    #caracther {
+        width: 50px;
+    }
+}
