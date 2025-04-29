@@ -357,6 +357,10 @@ body, html {
     font-size: 1rem;
     padding: 10px 18px;
   }
+  .score-button {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
 
   #game {
     font-size: 14px;
@@ -386,6 +390,11 @@ body, html {
   }
 
   .game-button {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+
+  .score-button {
     font-size: 1rem;
     padding: 10px 18px;
   }
@@ -425,7 +434,10 @@ body, html {
     font-size: 0.85rem;
     padding: 6px 12px;
   }
-
+  .score-button {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
   #game {
     font-size: 12px;
     padding: 3vw 2vw;
