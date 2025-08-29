@@ -172,6 +172,8 @@ body {
         width: 80px;
     }
     .game-img {
+        display: block;
+        margin: 0 auto;
         width: 70%;
         padding-bottom: 5px;
     }
