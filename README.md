@@ -15,3 +15,14 @@ mutta koodia sieltä ei ole lainattu.
 Tekijät:
 Emilia Kaarre, roosathemusa, Ada Remes, Ada686, Tatiana Pirmagomedova, tpirmago, Katri Eskelinen, katri-code
 
+Etusivu: Emilia ja Tatiana
+Matikka: Tatiana
+Äikkä: Katri
+Hissa: Ada
+Ymppä: Emilia
+Pisteet: Ada
+Info: Katri
+UI: Emilia ja Tatiana
+
+
+
